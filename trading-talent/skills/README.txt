@@ -1,0 +1,1 @@
+This folder contains code for inferring skill sets from skill keyword entries, job titles, and other parts of a resume. We may infer either a flat set of fkills, or a hierarchy of skills. This code also will allow for assignment of skill provenance over time.

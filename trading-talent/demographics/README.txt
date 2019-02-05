@@ -1,0 +1,1 @@
+This folder contains code for inferring ethnic origin and gender from photographs and names, as well as code for validating / annotating training data. The purpose of better ethnicity/gender detection is to understand potential systematic biases in global employment dynamics. We strongly discourage the use of this codebase for profiling or automated decision making.

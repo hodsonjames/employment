@@ -1,0 +1,1 @@
+This folder contains code for improving the structuring, representation, and disambiguation of job titles, functional roles, departments, and other information often incorporated into the job title field of a resume.

@@ -1,0 +1,1 @@
+This folder contains code and experiments for linking job titles in resumes to the BLS O*NET taxonomy and European ESCO taxonomy of job functions/titles. This allows us to leverage additional segment data provided by BLS and the European Union.
