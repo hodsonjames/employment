@@ -1,0 +1,1 @@
+This directory contains code to replicate the Fedyk & Hodson study of the effect of the Lehman Brothers' collapse on a highly skilled workforce (finance workers at Lehman in 2008 vs other comparable institutions).
