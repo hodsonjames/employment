@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import math
-import scipy
+from scipy.stats import mstats
 from sklearn.linear_model import LinearRegression
 
 # 1. Download data
@@ -20,68 +20,130 @@ join = join.loc[(join['Year + Month'] >= 200001)]
 leave = leave.loc[(leave['Year + Month'] >= 200001)]
 
 # 2. Compute turnover variables from the three data files
-def turnover(i,t):
-    new = int(join.loc[(join['Year + Month'] == t) & (join['Stock Symbol'] == i)]['# Employees'])
-    depart = int(leave.loc[(leave['Year + Month'] == t) & (leave['Stock Symbol'] == i)]['# Employees'])
-    n = int(current.loc[(current['Year + Month'] == t) & (current['Stock Symbol'] == i)]['# Employees'])
-    turnover = (new + depart) / n
-    
-    return turnover
+# iterate over rows instead of calling data frames
+turnover = current
+turnover['Joined'] = join['# Employees']
+turnover['Left'] = leave['# Employees']
 
-# Is there a more efficient way to do this? Takes a very long time because current is large
-# Should the turnover function be applied to current in the first place?  What (i,t) pairs should I pass in and from what data frame?
-# From what dataset do I pull the firms and months to pass into the turnover function - current (fastwhitepaper_month_current) or dat (CRSP data)?
+def calc_turnover(row):
+    new = row['Joined']
+    depart = row['Left']
+    n = row['# Employees']
+    return (new + depart) / (n - new)
+
 turn = []
-for index, row in current.iterrows():
+for index, row in turnover.iterrows():
     try:
-        turn.append(turnover(row['Stock Symbol'], row['Year + Month']))
+        turn.append(calc_turnover(row))
     except:
         turn.append(np.nan)
 
 # 3. Winsorize turnover variable
 turn = scipy.stats.mstats.winsorize(turn, limits=(.01,.01))
-current['Turnover'] = turn # Do I need to do this or instead just use it to make matrix for regression?
+turnover['Turnover'] = turn
 
 # 4. Compute size, book to market, industry and merge to turnover variables
-dat = pd.read_csv("/Users/jacquelinewood/Documents/TradingOnTalentURAP/PriceVolIndustry.csv")
+dat = pd.read_csv("/Users/jacquelinewood/Documents/TradingOnTalentURAP/CRSP.csv") # monthly
+dat['NAICS'] = [int(str(code)[:2]) if not np.isnan(code) else np.nan for code in dat['NAICS']]
 dat['Year + Month'] = [int(str(date)[:-2]) for date in dat['date'].values]
-dat['Size'] = np.log(dat['PRC'] * dat['VOL'])
+dat['Market Value'] = dat['PRC'] * dat['SHROUT']
+dat['Size'] = np.log(dat['Market Value'])
 
-bkmkt = pd.read_csv("/Users/jacquelinewood/Documents/TradingOnTalentURAP/BookMkt.csv")
-bkmkt['Calculated Market Value'] = bkmkt['prccq'] * bkmkt['cshoq']
+returns = dat[['PERMNO','date','TICKER','RET','sprtrn','Year + Month']]
+dat = dat[['PERMNO','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','Size']]
 
-# Know I am supposed to calculate the BMi,t, defined as firm i’s book-to-market ratio using book value from the most recent quarter-end preceding month t.
-# How do I get the most recent quarter-end preceding month t  - bkmkt (from Compustat) only has a row per firm, per quarter, not by month?
-# Do I have to merge with the larger dataset (dat from CRSP) in order to accurately calculate book value to use?
-def calc_bm(quarter,firm):
-    if quarter[-2:] == 'Q1':
-        last_quarter = str(int(quarter[:4])-1) + 'Q4'
-    else:
-        last_quarter = quarter[:5] + str(int(quarter[-1:])-1)
-    book_val = float(bkmkt.loc[(bkmkt['tic']==firm) & (bkmkt['datafqtr']==last_quarter)]['ceqq'])
-    mkt_val = float(bkmkt.loc[(bkmkt['tic']==firm) & (bkmkt['datafqtr']==quarter)]['Calculated Market Value'])
+bookval = pd.read_csv("/Users/jacquelinewood/Documents/URAP/Compustat.csv")
+bookval['Year + Month'] = [int(str(date)[:-2]) for date in bookval['datadate'].values]
+
+merged = pd.merge(dat, bookval, how = 'outer', left_on = ['TICKER','Year + Month'], right_on = ['tic','Year + Month'])
+merged = merged[['date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','Size','datafqtr','ceqq']]
+sorted_merged = merged.sort_values(by = ['TICKER','date'])
+frontfilled = sorted_merged[['datafqtr','ceqq']].fillna(method='ffill')
+sorted_merged[['datafqtr','ceqq']] = frontfilled
+
+# possibly keep book values in dictionary - BM seems to still be off
+
+def calc_bmratio(row):
+    book_val = row['ceqq']
+    mkt_val = row['Market Value']
     return book_val / mkt_val
 
 ratio = []
-for index, row in bkmkt.iterrows():
+for index, row in sorted_merged.iterrows():
     try:
-        ratio.append(calc_bm(row['datafqtr'], row['tic']))
+        ratio.append(calc_bmratio(row))
     except:
         ratio.append(np.nan)
 
-bkmkt['Book to Market Ratio'] = ratio #Just save this for vector of characteristics? But need to be able to merge them so need additional features.
+sorted_merged['Book to Market Ratio'] = ratio
 
-combined = pd.merge(dat, bkmkt, how = 'outer', left_on = ['TICKER','date'], right_on = ['tic','datadate'])
-combined = pd.merge(combined,current,how='outer',left_on = ['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month'])
-firm_chars = combined [['Size','Book to Market Ratio','HSICIG','Turnover']]
+industry_dummy = pd.get_dummies(sorted_merged['NAICS'])
+
+firm_chars = sorted_merged[['TICKER','Year + Month','Size','Book to Market Ratio']]
+firm_chars = pd.concat([firm_chars,industry_dummy], axis=1)
+firm_chars = pd.merge(firm_chars,turnover[['Stock Symbol','Year + Month','Turnover']],'inner',left_on=['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month']).drop(['TICKER','Year + Month','Stock Symbol'], axis=1)
+firm_chars = firm_chars.dropna()
 
 # 5. Compute abnormal turnover : regress turnover on firm characteristics and take residuals
-X = firm_chars[['Size','Book to Market Ratio','HSICIG']]
 Y = firm_chars[['Turnover']]
+X = firm_chars.drop(['Turnover'],axis=1)
 
 reg = LinearRegression().fit(X, Y)
 predictions = reg.predict(X)
 abnormal_turnover = Y - predictions
+
+
+
+# 6. Combine abnormal turnover with returns, using a lag (1 mo/2 mo/3 mo/6 mo)
+
+returns = returns.sort_values(by = ['TICKER','date'])
+
+def to_float(item):
+    try:
+        return float(item)
+    except:
+        return np.nan
+
+returns['RET'] = [to_float(ret) for ret in returns['RET'].values]
+
+returns['abnormal_return'] = returns['RET'] - returns['sprtrn']
+
+Y = returns['RET']
+
+def item(value):
+    return value
+
+grouped_returns = returns.groupby(['TICKER','Year + Month'])['RET','abnormal_return'].agg(item)
+
+def shift_df(grouped,lag):
+    shifted_dfs = []
+    tickers = grouped.index.get_level_values('TICKER').unique()
+    for ticker in tickers:
+        shifted = grouped.loc[ticker].shift(lag)
+        shifted['TICKER'] = np.repeat(ticker,len(shifted))
+        shifted_dfs.append(shifted)
+    lagged = pd.concat(shifted_dfs).reset_index().sort_values(by = ['TICKER','Year + Month'])
+    lagged = lagged.rename(columns={"RET": "Lagged RET", "abnormal_return": "Lagged abnormal_return"})
+    return lagged
+
+lags = [1,2,3,6]
+
+lagged = []
+for L in lags:
+    lagged.append(shift_df(grouped_returns,L))
+
+Xs = []
+Ys = []
+for lag in lagged:
+    merged = returns.merge(lag,on=['TICKER','Year + Month']).dropna()
+    Xs.append(merged[['Lagged RET','Lagged abnormal_return']])
+    Ys.append(merged[['RET']])
+
+# Error here - will resolve ASAP
+regs = []
+for x_y in zip(Xs,Ys):
+    reg = LinearRegression().fit(x_y[0], x_y[1])
+    regs.append(reg)
 
 
 
