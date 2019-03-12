@@ -16,7 +16,7 @@ class SkillClassifier(object):
         self.features = None
         self.skillsets_mappings = {}
 
-    def train(self, n_topics=45):
+    def train(self, n_topics=50):
         """
         Trains the Skill Classifier on the given dataset through an initial read and process of the data.
 
@@ -250,7 +250,7 @@ class SkillClassifier(object):
         )  # convert sparse matrix to full
         return data_processed, vectorizer
 
-    def _calc_lda(self, data_processed, num_topics=45, max_iter=500):
+    def _calc_lda(self, data_processed, num_topics=50, max_iter=500):
         """
         Runs LDA on a given number of topics. Returns the model and the data fitted by the
         LDA transformation
