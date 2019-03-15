@@ -39,7 +39,7 @@ for index, row in turnover.iterrows():
         turn.append(np.nan)
 
 # 3. Winsorize turnover variable
-turn = scipy.stats.mstats.winsorize(turn, limits=(.01,.01))
+turn = mstats.winsorize(turn, limits=(.01,.01))
 turnover['Turnover'] = turn
 
 # 4. Compute size, book to market, industry and merge to turnover variables
@@ -53,6 +53,7 @@ returns = dat[['PERMNO','date','TICKER','RET','sprtrn','Year + Month']]
 dat = dat[['PERMNO','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','Size']]
 
 bookval = pd.read_csv("/Users/jacquelinewood/Documents/URAP/Compustat.csv")
+bookval['ceqq'] = bookval['ceqq'] * 1000 #said it was in millions but this is what makes it equal intermediate values?
 bookval['Year + Month'] = [int(str(date)[:-2]) for date in bookval['datadate'].values]
 
 merged = pd.merge(dat, bookval, how = 'outer', left_on = ['TICKER','Year + Month'], right_on = ['tic','Year + Month'])
@@ -77,22 +78,34 @@ for index, row in sorted_merged.iterrows():
 
 sorted_merged['Book to Market Ratio'] = ratio
 
+grouped_industries = sorted_merged.groupby(['TICKER'])['NAICS'].apply(max)
+
+industries = dict(grouped_industries)
+ind = []
+for index, row in sorted_merged.iterrows():
+    try:
+        ind.append(industries[row['TICKER']])
+    except:
+        ind.append(np.nan)
+sorted_merged['NAICS'] = ind
+
 industry_dummy = pd.get_dummies(sorted_merged['NAICS'])
 
-firm_chars = sorted_merged[['TICKER','Year + Month','Size','Book to Market Ratio']]
+#firm_chars = sorted_merged[['TICKER','Year + Month','Size','Book to Market Ratio']]
 firm_chars = pd.concat([firm_chars,industry_dummy], axis=1)
 firm_chars = pd.merge(firm_chars,turnover[['Stock Symbol','Year + Month','Turnover']],'inner',left_on=['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month']).drop(['TICKER','Year + Month','Stock Symbol'], axis=1)
 firm_chars = firm_chars.dropna()
 
 # 5. Compute abnormal turnover : regress turnover on firm characteristics and take residuals
 Y = firm_chars[['Turnover']]
-X = firm_chars.drop(['Turnover'],axis=1)
+X = firm_chars.drop(['Turnover','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','datafqtr','ceqq'],axis=1)
 
 reg = LinearRegression().fit(X, Y)
 predictions = reg.predict(X)
 abnormal_turnover = Y - predictions
 
-
+firm_chars['abnormal_turnover'] = abnormal_turnover
+sorted_merged['abnormal_turnover'] = abnormal_turnover
 
 # 6. Combine abnormal turnover with returns, using a lag (1 mo/2 mo/3 mo/6 mo)
 
@@ -108,14 +121,14 @@ returns['RET'] = [to_float(ret) for ret in returns['RET'].values]
 
 returns['abnormal_return'] = returns['RET'] - returns['sprtrn']
 
-Y = returns['RET']
+total = pd.merge(sorted_merged,turnover,left_on=['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month'])
+total = pd.merge(total,returns, on = ['TICKER','Year + Month','date'])
 
 def item(value):
     return value
 
-grouped_returns = returns.groupby(['TICKER','Year + Month'])['RET','abnormal_return'].agg(item)
-
-def shift_df(grouped,lag):
+def shift_df(total,lag,x_column):
+    grouped = pd.DataFrame(total.groupby(['TICKER','Year + Month'])[x_column].agg(item))
     shifted_dfs = []
     tickers = grouped.index.get_level_values('TICKER').unique()
     for ticker in tickers:
@@ -123,27 +136,109 @@ def shift_df(grouped,lag):
         shifted['TICKER'] = np.repeat(ticker,len(shifted))
         shifted_dfs.append(shifted)
     lagged = pd.concat(shifted_dfs).reset_index().sort_values(by = ['TICKER','Year + Month'])
-    lagged = lagged.rename(columns={"RET": "Lagged RET", "abnormal_return": "Lagged abnormal_return"})
+    lagged = lagged.rename(columns={x_column: "Lagged " + x_column})
     return lagged
 
-lags = [1,2,3,6]
+def run_return_regressions(total,x_var,y_var):
+    lags = [1,2,3,6]
+    lagged = []
+    for L in lags:
+        lagged.append(shift_df(total,L,x_var))
+    matrices = []
+    col_name = 'Lagged ' + str(x_var)
+    for lag in lagged:
+        merged = total.merge(lag,on=['TICKER','Year + Month'])
+        merged[col_name] = [to_float(to) for to in merged[col_name].values]
+        matrices.append(merged.dropna())
+    regs = []
+    for matrix in matrices:
+        reg = LinearRegression().fit(matrix[[col_name]], matrix[[y_var]])
+        regs.append(reg)
+    return regs
 
-lagged = []
-for L in lags:
-    lagged.append(shift_df(grouped_returns,L))
+pairs = [('Turnover','RET'),('Turnover','abnormal_return'),('abnormal_turnover','abnormal_return')]
 
-Xs = []
-Ys = []
-for lag in lagged:
-    merged = returns.merge(lag,on=['TICKER','Year + Month']).dropna()
-    Xs.append(merged[['Lagged RET','Lagged abnormal_return']])
-    Ys.append(merged[['RET']])
+regressions = {}
+for pair in pairs:
+    regressions[(pair[0],pair[1])] = run_return_regressions(pair[0],pair[1])
 
-# Error here - will resolve ASAP
-regs = []
-for x_y in zip(Xs,Ys):
-    reg = LinearRegression().fit(x_y[0], x_y[1])
-    regs.append(reg)
+# Include performance in firm_chars
+
+firm_chars_perf = pd.merge(firm_chars, returns, on = ['TICKER','Year + Month','date']).dropna()
+
+Y = firm_chars_perf[['Turnover']]
+X = firm_chars_perf.drop(['Turnover','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','datafqtr','ceqq','abnormal_turnover','PERMNO','sprtrn','abnormal_return'],axis=1)
+
+reg = LinearRegression().fit(X, Y)
+predictions = reg.predict(X)
+abnormal_turnover_perf = Y - predictions
+
+firm_chars_perf['abnormal_turnover'] = abnormal_turnover_perf
+
+perf_regressions = run_return_regressions(firm_chars_perf,'abnormal_turnover','abnormal_return')
+
+# Intermediate checking code
+
+repl_check = pd.read_csv("/Users/jacquelinewood/Documents/URAP/replication-check-intermediate.csv")
+
+repl_check.columns = ['(Ticker, Year + Month)','ret','abn_ret','log_size','ind','price','bm','join','depart','turnover','abn_turnover']
+
+def clean_tickyearmo(val):
+    first = val.split()[0]
+    first = first.replace("(","")
+    first = first.replace(",","")
+    second = val.split()[1]
+    second = second.replace(".","")
+    second = int(second.replace(")",""))
+    return tuple((first,second))
+
+repl_check['(Ticker, Year + Month)'] = [clean_tickyearmo(tup) for tup in repl_check['(Ticker, Year + Month)'].values]
+
+def turnover_check(ticker, year_mo):
+    index = tuple((ticker,year_mo))
+    print(index)
+    to = turnover.loc[(turnover['Stock Symbol'] == ticker) & (turnover['Year + Month'] == year_mo)]["Turnover"].values[0]
+    print("Found turnover: " + str(to))
+    check_to = repl_check.loc[repl_check['(Ticker, Year + Month)'] == index]['turnover'].values[0]
+    print("Turnover to check: " + str(check_to))
+    print(math.isclose(to,check_to,rel_tol=.05))
+
+for tups in repl_check['(Ticker, Year + Month)'].values:
+    turnover_check(tups[0],tups[1])
+
+def bmr_check(ticker,year_mo):
+    index = tuple((ticker,year_mo))
+    print(index)
+    try:
+        bmr = sorted_merged.loc[(sorted_merged['TICKER'] == ticker) & (sorted_merged['Year + Month'] == year_mo)]["Book to Market Ratio"].values[0]
+        print("Found bmr: " + str(bmr))
+        check_bmr = float(repl_check.loc[repl_check['(Ticker, Year + Month)'] == index]['bm'].values[0])
+        print("BMR to check: " + str(check_bmr))
+        print(math.isclose(bmr,check_bmr,rel_tol=.05))
+    except:
+        print("Not in table")
+
+for tups in repl_check['(Ticker, Year + Month)'].values:
+    bmr_check(tups[0],tups[1])
+
+def abn_turnover_check(ticker, year_mo):
+    index = tuple((ticker,year_mo))
+    print(index)
+    abn_to = firm_chars.loc[(firm_chars['TICKER'] == ticker) & (firm_chars['Year + Month'] == year_mo)]["abnormal_turnover"].values[0]
+    print("Found abn_turnover: " + str(abn_to))
+    check_abn_to = repl_check.loc[repl_check['(Ticker, Year + Month)'] == index]['abn_turnover'].values[0]
+    print("Abn_turnover to check: " + str(check_abn_to))
+    print(math.isclose(abn_to,check_abn_to,rel_tol=.05))
+
+for tups in repl_check['(Ticker, Year + Month)'].values:
+    abn_turnover_check(tups[0],tups[1])
+
+
+
+# fix dates - 2007,17 problem
+# fix book_val by magnitude
+# look at table to find regressions to run
+# run 4th regression with added firm_chars column perf (includes returns)
 
 
 
