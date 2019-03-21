@@ -105,7 +105,7 @@ predictions = reg.predict(X)
 abnormal_turnover = Y - predictions
 
 firm_chars['abnormal_turnover'] = abnormal_turnover
-sorted_merged['abnormal_turnover'] = abnormal_turnover
+sorted_merged = pd.merge(sorted_merged, firm_chars[['TICKER','Year + Month','abnormal_turnover']], how='outer', on=['TICKER','Year + Month'])
 
 # 6. Combine abnormal turnover with returns, using a lag (1 mo/2 mo/3 mo/6 mo)
 
@@ -164,10 +164,10 @@ for pair in pairs:
 
 # Include performance in firm_chars
 
-firm_chars_perf = pd.merge(firm_chars, returns, on = ['TICKER','Year + Month','date']).dropna()
+firm_chars_perf = pd.merge(firm_chars, returns, on = ['TICKER','Year + Month']).dropna()
 
 Y = firm_chars_perf[['Turnover']]
-X = firm_chars_perf.drop(['Turnover','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','datafqtr','ceqq','abnormal_turnover','PERMNO','sprtrn','abnormal_return'],axis=1)
+X = firm_chars_perf.drop(['date','Turnover','TICKER','Year + Month','abnormal_turnover','PERMNO','sprtrn','abnormal_return'],axis=1)
 
 reg = LinearRegression().fit(X, Y)
 predictions = reg.predict(X)
@@ -221,6 +221,27 @@ def bmr_check(ticker,year_mo):
 for tups in repl_check['(Ticker, Year + Month)'].values:
     bmr_check(tups[0],tups[1])
 
+def book_mv_check(ticker,year_mo):
+    index = tuple((ticker,year_mo))
+    print(index)
+    try:
+        book = sorted_merged.loc[(sorted_merged['TICKER'] == ticker) & (sorted_merged['Year + Month'] == year_mo)]["ceqq"].values[0]
+        print("Found book: " + str(book))
+        check_book = float(repl_check.loc[repl_check['(Ticker, Year + Month)'] == index]['book'].values[0])
+        print("Book to check: " + str(check_book))
+        print(math.isclose(book,check_book,rel_tol=.05))
+        
+        market = sorted_merged.loc[(sorted_merged['TICKER'] == ticker) & (sorted_merged['Year + Month'] == year_mo)]["Market Value"].values[0]
+        print("Found market: " + str(market))
+        check_market = float(repl_check.loc[repl_check['(Ticker, Year + Month)'] == index]['market'].values[0])
+        print("Market to check: " + str(check_market))
+        print(math.isclose(market,check_market))
+    except:
+        print("Not in table")
+
+for tups in repl_check['(Ticker, Year + Month)'].values:
+    book_mv_check(tups[0],tups[1])
+
 def abn_turnover_check(ticker, year_mo):
     index = tuple((ticker,year_mo))
     print(index)
@@ -233,12 +254,21 @@ def abn_turnover_check(ticker, year_mo):
 for tups in repl_check['(Ticker, Year + Month)'].values:
     abn_turnover_check(tups[0],tups[1])
 
+# Portfolio work
 
+portfolios = {}
+for year_mo in sorted_merged['Year + Month'].unique():
+    month = sorted_merged.loc[sorted_merged['Year + Month']==year_mo]
+    month = month.sort_values(['abnormal_turnover'])
+    top_cutoff = np.nanquantile(month['abnormal_turnover'],0.8)
+    shorts = month.loc[month['abnormal_turnover'] >= top_cutoff]
+    short = np.average(shorts['abnormal_turnover'])
+    bottom_cutoff = np.nanquantile(month['abnormal_turnover'],0.2)
+    longs = month.loc[month['abnormal_turnover'] <= bottom_cutoff]
+    long = np.average(longs['abnormal_turnover'])
+    net_return = long - short
+    portfolios[year_mo] = (net_return)
 
-# fix dates - 2007,17 problem
-# fix book_val by magnitude
-# look at table to find regressions to run
-# run 4th regression with added firm_chars column perf (includes returns)
 
 
 
