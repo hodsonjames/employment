@@ -2537,7 +2537,7 @@ engineering studies,2,ingénieur d'étude
 engineering studies,2,ingénieur d'études
 development engineer,2,ingénieur développement
 software engineer,2,ingénieur logiciel
-engineer r and d,4,ingénieur r and d
+research and development engineer,4,ingénieur r and d
 engineer works,2,ingénieur travaux
 engineer,1,inginer
 owner,1,inhaber
@@ -5065,3 +5065,5 @@ manager,1,zaakvoerder
 independent,1,zelfstandige
 zone manager,2,zone manager
 zumba instructor,2,zumba instructor
+net,1,.net
+android,1,android
