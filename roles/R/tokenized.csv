@@ -15,7 +15,7 @@
 1,"director","director","director",NA,NA,NA,NA
 3,"director of development","director of develop","director","develop",NA,NA,NA
 2,"enterprise director","enterpris director","enterpris","director",NA,NA,NA
-1,"docent","docent","docent",NA,NA,NA,NA
+1,"docent","docent","teacher",NA,NA,NA,NA
 3,"deputy general director","deputi general director","deputi","general","director",NA,NA
 2,"deputy director","deputi director","deputi","director",NA,NA,NA
 2,"individual entrepreneur","individu entrepreneur","individu","entrepreneur",NA,NA,NA
@@ -31,8 +31,8 @@
 4,"manager of the staff","manag of the staff","manag","staff",NA,NA,NA
 2,"sales manager","sale manag","sale","manag",NA,NA,NA
 2,"account manager","account manag","account","manag",NA,NA,NA
-3,"head of department","head of depart","head","depart",NA,NA,NA
-3,"head of sales","head of sale","head","sale",NA,NA,NA
+3,"head of department","head of depart","leader","depart",NA,NA,NA
+3,"head of sales","head of sale","leader","sale",NA,NA,NA
 1,"retiree","retire","retire",NA,NA,NA,NA
 1,"entrepreneur","entrepreneur","entrepreneur",NA,NA,NA,NA
 1,"teacher","teacher","teacher",NA,NA,NA,NA
@@ -235,12 +235,12 @@
 2,"assistant professor","assist professor","assist","professor",NA,NA,NA
 1,"administrator","administr","administr",NA,NA,NA,NA
 1,"administrator","administr","administr",NA,NA,NA,NA
-2,"admin assistant","admin assist","admin","assist",NA,NA,NA
-2,"admin asst","admin asst","admin","asst",NA,NA,NA
-2,"admin clerk","admin clerk","admin","clerk",NA,NA,NA
-2,"admin executive","admin execut","admin","execut",NA,NA,NA
-2,"admin manager","admin manag","admin","manag",NA,NA,NA
-2,"admin officer","admin offic","admin","offic",NA,NA,NA
+2,"admin assistant","admin assist","administr","assist",NA,NA,NA
+2,"admin asst","admin asst","administr","asst",NA,NA,NA
+2,"admin clerk","admin clerk","administr","clerk",NA,NA,NA
+2,"admin executive","admin execut","administr","execut",NA,NA,NA
+2,"admin manager","admin manag","administr","manag",NA,NA,NA
+2,"admin officer","admin offic","administr","offic",NA,NA,NA
 1,"administrator","administr","administr",NA,NA,NA,NA
 1,"administrator","administr","administr",NA,NA,NA,NA
 1,"administrator","administr","administr",NA,NA,NA,NA
@@ -297,7 +297,7 @@
 1,"advocate","advoc","advoc",NA,NA,NA,NA
 1,"lawyer","lawyer","lawyer",NA,NA,NA,NA
 1,"lawyer","lawyer","lawyer",NA,NA,NA,NA
-2,"department head","depart head","depart","head",NA,NA,NA
+2,"department head","depart head","depart","leader",NA,NA,NA
 2,"department manager","depart manag","depart","manag",NA,NA,NA
 2,"graduation internship","graduat internship","graduat","internship",NA,NA,NA
 1,"owner","owner","owner",NA,NA,NA,NA
@@ -663,13 +663,13 @@
 3,"audio visual technician","audio visual technician","audio","visual","technician",NA,NA
 1,"radiologist","radiologist","radiologist",NA,NA,NA,NA
 1,"auditor","auditor","auditor",NA,NA,NA,NA
-2,"audit assistant","audit assist","audit","assist",NA,NA,NA
-2,"audit associate","audit associ","audit","associ",NA,NA,NA
+2,"audit assistant","audit assist","auditor","assist",NA,NA,NA
+2,"audit associate","audit associ","auditor","associ",NA,NA,NA
 2,"intern auditor","intern auditor","intern","auditor",NA,NA,NA
-2,"audit manager","audit manag","audit","manag",NA,NA,NA
+2,"audit manager","audit manag","auditor","manag",NA,NA,NA
 2,"senior auditor","senior auditor","senior","auditor",NA,NA,NA
-2,"audit supervisor","audit supervisor","audit","supervisor",NA,NA,NA
-2,"audit trainee","audit traine","audit","traine",NA,NA,NA
+2,"audit supervisor","audit supervisor","auditor","supervisor",NA,NA,NA
+2,"audit trainee","audit traine","auditor","traine",NA,NA,NA
 1,"auditor","auditor","auditor",NA,NA,NA,NA
 2,"intern auditor","intern auditor","intern","auditor",NA,NA,NA
 1,"auditor","auditor","auditor",NA,NA,NA,NA
@@ -792,7 +792,7 @@
 3,"box office assistant","box offic assist","box","offic","assist",NA,NA
 3,"box office manager","box offic manag","box","offic","manag",NA,NA
 2,"branch administrator","branch administr","branch","administr",NA,NA,NA
-2,"branch head","branch head","branch","head",NA,NA,NA
+2,"branch head","branch head","branch","leader",NA,NA,NA
 2,"branch manager","branch manag","branch","manag",NA,NA,NA
 3,"branch operations manager","branch oper manag","branch","oper","manag",NA,NA
 3,"branch sales manager","branch sale manag","branch","sale","manag",NA,NA
@@ -844,7 +844,7 @@
 3,"business development specialist","busi develop specialist","busi","develop","specialist",NA,NA
 2,"business director","busi director","busi","director",NA,NA,NA
 2,"business executive","busi execut","busi","execut",NA,NA,NA
-2,"business head","busi head","busi","head",NA,NA,NA
+2,"business head","busi head","busi","leader",NA,NA,NA
 3,"business intelligence analyst","busi intellig analyst","busi","intellig","analyst",NA,NA
 3,"business intelligence consultant","busi intellig consult","busi","intellig","consult",NA,NA
 2,"business manager","busi manag","busi","manag",NA,NA,NA
@@ -986,16 +986,16 @@
 1,"entrepreneur","entrepreneur","entrepreneur",NA,NA,NA,NA
 1,"leader","leader","leader",NA,NA,NA,NA
 1,"chief","chief","chief",NA,NA,NA,NA
-3,"head of mission","head of mission","head","mission",NA,NA,NA
+3,"head of mission","head of mission","leader","mission",NA,NA,NA
 2,"party leader","parti leader","parti","leader",NA,NA,NA
 2,"product manager","product manag","product","manag",NA,NA,NA
 2,"project manager","project manag","project","manag",NA,NA,NA
 2,"project manager","project manag","project","manag",NA,NA,NA
-2,"head waiter","head waiter","head","waiter",NA,NA,NA
+2,"head waiter","head waiter","leader","waiter",NA,NA,NA
 2,"business leader","busi leader","busi","leader",NA,NA,NA
-3,"head of service","head of servic","head","servic",NA,NA,NA
-3,"head of sales","head of sale","head","sale",NA,NA,NA
-2,"executive chef","execut chef","execut","chef",NA,NA,NA
+3,"head of service","head of servic","leader","servic",NA,NA,NA
+3,"head of sales","head of sale","leader","sale",NA,NA,NA
+2,"executive chef","execut chef","execut","chief",NA,NA,NA
 2,"chemical engineer","chemic engin","chemic","engin",NA,NA,NA
 1,"chemist","chemist","chemist",NA,NA,NA,NA
 2,"chemistry teacher","chemistri teacher","chemistri","teacher",NA,NA,NA
@@ -1145,8 +1145,8 @@
 2,"shop assistant","shop assist","shop","assist",NA,NA,NA
 2,"shop assistant","shop assist","shop","assist",NA,NA,NA
 1,"clerk","clerk","clerk",NA,NA,NA,NA
-2,"commis chef","commi chef","commi","chef",NA,NA,NA
-2,"commis chef","commi chef","commi","chef",NA,NA,NA
+2,"commis chef","commi chef","commi","chief",NA,NA,NA
+2,"commis chef","commi chef","commi","chief",NA,NA,NA
 1,"commissioner","commission","commission",NA,NA,NA,NA
 2,"commissioning engineer","commiss engin","commiss","engin",NA,NA,NA
 2,"commissioning manager","commiss manag","commiss","manag",NA,NA,NA
@@ -1212,7 +1212,7 @@
 2,"configuration manager","configur manag","configur","manag",NA,NA,NA
 1,"advisor","advisor","advisor",NA,NA,NA,NA
 2,"customer advisor","custom advisor","custom","advisor",NA,NA,NA
-2,"commercial counsellor","commerci counsellor","commerci","counsellor",NA,NA,NA
+2,"commercial counsellor","commerci counsellor","commerci","counselor",NA,NA,NA
 2,"sales consultant","sale consult","sale","consult",NA,NA,NA
 2,"financial advisor","financi advisor","financi","advisor",NA,NA,NA
 2,"customer advisor","custom advisor","custom","advisor",NA,NA,NA
@@ -1466,7 +1466,7 @@
 2,"delivery manager","deliveri manag","deliveri","manag",NA,NA,NA
 2,"demand planner","demand planner","demand","planner",NA,NA,NA
 2,"vice chief","vice chief","vice","chief",NA,NA,NA
-3,"chef de partie","chef de parti","chef","de","parti",NA,NA
+3,"chef de partie","chef de parti","chief","de","parti",NA,NA
 1,"demonstrator","demonstr","demonstr",NA,NA,NA,NA
 2,"dental assistant","dental assist","dental","assist",NA,NA,NA
 2,"dental hygienist","dental hygienist","dental","hygienist",NA,NA,NA
@@ -1477,7 +1477,7 @@
 1,"dentist","dentist","dentist",NA,NA,NA,NA
 1,"deo","deo","deo",NA,NA,NA,NA
 2,"commercial department","commerci depart","commerci","depart",NA,NA,NA
-2,"department head","depart head","depart","head",NA,NA,NA
+2,"department head","depart head","depart","leader",NA,NA,NA
 2,"department manager","depart manag","depart","manag",NA,NA,NA
 2,"department supervisor","depart supervisor","depart","supervisor",NA,NA,NA
 1,"salesman","salesman","salesman",NA,NA,NA,NA
@@ -1917,7 +1917,7 @@
 4,"executive assistant to ceo","execut assist to ceo","execut","assist","ceo",NA,NA
 5,"executive assistant to the president","execut assist to the presid","execut","assist","presid",NA,NA
 3,"executive board member","execut board member","execut","board","member",NA,NA
-2,"executive chef","execut chef","execut","chef",NA,NA,NA
+2,"executive chef","execut chef","execut","chief",NA,NA,NA
 2,"executive coach","execut coach","execut","coach",NA,NA,NA
 2,"executive consultant","execut consult","execut","consult",NA,NA,NA
 2,"executive coordinator","execut coordin","execut","coordin",NA,NA,NA
@@ -1934,7 +1934,7 @@
 2,"executive sales","execut sale","execut","sale",NA,NA,NA
 3,"executive sales representative","execut sale repres","execut","sale","repres",NA,NA
 2,"executive secretary","execut secretari","execut","secretari",NA,NA,NA
-3,"executive sous chef","execut sous chef","execut","sous","chef",NA,NA
+3,"executive sous chef","execut sous chef","execut","sous","chief",NA,NA
 3,"executive team leader","execut team leader","execut","team","leader",NA,NA
 3,"executive vice president","execut vice presid","execut","vice","presid",NA,NA
 2,"account executive","account execut","account","execut",NA,NA,NA
@@ -2328,31 +2328,31 @@
 2,"hardware engineer","hardwar engin","hardwar","engin",NA,NA,NA
 2,"human capital","human capit","human","capit",NA,NA,NA
 1,"leader","leader","leader",NA,NA,NA,NA
-2,"head bartender","head bartend","head","bartend",NA,NA,NA
-2,"head cashier","head cashier","head","cashier",NA,NA,NA
-2,"head chef","head chef","head","chef",NA,NA,NA
-2,"head coach","head coach","head","coach",NA,NA,NA
-3,"head football coach","head footbal coach","head","footbal","coach",NA,NA
-2,"head lifeguard","head lifeguard","head","lifeguard",NA,NA,NA
-4,"head of business development","head of busi develop","head","busi","develop",NA,NA
-3,"head of communications","head of communic","head","communic",NA,NA,NA
-3,"head of department","head of depart","head","depart",NA,NA,NA
-3,"head of engineering","head of engin","head","engin",NA,NA,NA
-3,"head of finance","head of financ","head","financ",NA,NA,NA
+2,"head bartender","head bartend","leader","bartend",NA,NA,NA
+2,"head cashier","head cashier","leader","cashier",NA,NA,NA
+2,"head chef","head chef","leader","chief",NA,NA,NA
+2,"head coach","head coach","leader","coach",NA,NA,NA
+3,"head football coach","head footbal coach","leader","footbal","coach",NA,NA
+2,"head lifeguard","head lifeguard","leader","lifeguard",NA,NA,NA
+4,"head of business development","head of busi develop","leader","busi","develop",NA,NA
+3,"head of communications","head of communic","leader","communic",NA,NA,NA
+3,"head of department","head of depart","leader","depart",NA,NA,NA
+3,"head of engineering","head of engin","leader","engin",NA,NA,NA
+3,"head of finance","head of financ","leader","financ",NA,NA,NA
 2,"hr director","hr director","hr","director",NA,NA,NA
 2,"hr director","hr director","hr","director",NA,NA,NA
 2,"it director","it director","director",NA,NA,NA,NA
-3,"head of marketing","head of market","head","market",NA,NA,NA
-3,"head of operations","head of oper","head","oper",NA,NA,NA
-3,"head of production","head of product","head","product",NA,NA,NA
-3,"head of sales","head of sale","head","sale",NA,NA,NA
-3,"head of school","head of school","head","school",NA,NA,NA
-3,"head of section","head of section","head","section",NA,NA,NA
+3,"head of marketing","head of market","leader","market",NA,NA,NA
+3,"head of operations","head of oper","leader","oper",NA,NA,NA
+3,"head of production","head of product","leader","product",NA,NA,NA
+3,"head of sales","head of sale","leader","sale",NA,NA,NA
+3,"head of school","head of school","leader","school",NA,NA,NA
+3,"head of section","head of section","leader","section",NA,NA,NA
 2,"lead teacher","lead teacher","lead","teacher",NA,NA,NA
 2,"lead teller","lead teller","lead","teller",NA,NA,NA
-3,"head volleyball coach","head volleybal coach","head","volleybal","coach",NA,NA
-2,"head waiter","head waiter","head","waiter",NA,NA,NA
-2,"head waitress","head waitress","head","waitress",NA,NA,NA
+3,"head volleyball coach","head volleybal coach","leader","volleybal","coach",NA,NA
+2,"head waiter","head waiter","leader","waiter",NA,NA,NA
+2,"head waitress","head waitress","leader","waitress",NA,NA,NA
 1,"headhunter","headhunt","headhunt",NA,NA,NA,NA
 2,"lead teacher","lead teacher","lead","teacher",NA,NA,NA
 4,"health and safety officer","health and safeti offic","health","safeti","offic",NA,NA
@@ -2547,7 +2547,7 @@
 1,"sales","sale","sale",NA,NA,NA,NA
 4,"inside sales account manager","insid sale account manag","insid","sale","account","manag",NA
 3,"inside sales manager","insid sale manag","insid","sale","manag",NA,NA
-3,"inside sales rep","insid sale rep","insid","sale","rep",NA,NA
+3,"inside sales rep","insid sale rep","insid","sale","report",NA,NA
 3,"inside sales representative","insid sale repres","insid","sale","repres",NA,NA
 1,"inspector","inspector","inspector",NA,NA,NA,NA
 2,"inspection engineer","inspect engin","inspect","engin",NA,NA,NA
@@ -2589,8 +2589,8 @@
 2,"intern architect","intern architect","intern","architect",NA,NA,NA
 2,"intern engineer","intern engin","intern","engin",NA,NA,NA
 2,"internal auditor","intern auditor","intern","auditor",NA,NA,NA
-3,"intern audit intern","intern audit intern","intern","audit","intern",NA,NA
-3,"intern audit manager","intern audit manag","intern","audit","manag",NA,NA
+3,"intern audit intern","intern audit intern","intern","auditor","intern",NA,NA
+3,"intern audit manager","intern audit manag","intern","auditor","manag",NA,NA
 2,"internal auditor","intern auditor","intern","auditor",NA,NA,NA
 3,"intern medicine resident","intern medicin resid","intern","medicin","resid",NA,NA
 2,"internal sales","intern sale","intern","sale",NA,NA,NA
@@ -2605,7 +2605,7 @@
 2,"internship trainee","internship traine","internship","traine",NA,NA,NA
 1,"interpreter","interpret","interpret",NA,NA,NA,NA
 2,"intervention specialist","intervent specialist","intervent","specialist",NA,NA,NA
-2,"interventional cardiologist","intervent cardiologist","intervent","cardiologist",NA,NA,NA
+2,"interventional cardiologist","intervent cardiologist","intervent","radiologist",NA,NA,NA
 1,"interviewer","interview","interview",NA,NA,NA,NA
 2,"inventory analyst","inventori analyst","inventori","analyst",NA,NA,NA
 2,"inventory control","inventori control","inventori","control",NA,NA,NA
@@ -2672,7 +2672,7 @@
 2,"warehouse manager","warehous manag","warehous","manag",NA,NA,NA
 1,"chief","chief","chief",NA,NA,NA,NA
 2,"purchasing manager","purchas manag","purchas","manag",NA,NA,NA
-3,"head of department","head of depart","head","depart",NA,NA,NA
+3,"head of department","head of depart","leader","depart",NA,NA,NA
 2,"team leader","team leader","team","leader",NA,NA,NA
 2,"maintenance manager","mainten manag","mainten","manag",NA,NA,NA
 2,"construction manager","construct manag","construct","manag",NA,NA,NA
@@ -2683,7 +2683,7 @@
 2,"production manager","product manag","product","manag",NA,NA,NA
 2,"project manager","project manag","project","manag",NA,NA,NA
 2,"project manager","project manag","project","manag",NA,NA,NA
-4,"head of human resources","head of human resourc","head","human","resourc",NA,NA
+4,"head of human resources","head of human resourc","leader","human","resourc",NA,NA
 3,"chief of systems","chief of system","chief","system",NA,NA,NA
 2,"shift manager","shift manag","shift","manag",NA,NA,NA
 2,"sales manager","sale manag","sale","manag",NA,NA,NA
@@ -2725,7 +2725,7 @@
 2,"junior researcher","junior research","junior","research",NA,NA,NA
 3,"junior software developer","junior softwar develop","junior","softwar","develop",NA,NA
 3,"junior software engineer","junior softwar engin","junior","softwar","engin",NA,NA
-3,"junior sous chef","junior sous chef","junior","sous","chef",NA,NA
+3,"junior sous chef","junior sous chef","junior","sous","chief",NA,NA
 3,"junior web developer","junior web develop","junior","web","develop",NA,NA
 1,"lawyer","lawyer","lawyer",NA,NA,NA,NA
 1,"lawyer","lawyer","lawyer",NA,NA,NA,NA
@@ -2779,7 +2779,7 @@
 1,"lead","lead","lead",NA,NA,NA,NA
 2,"lead auditor","lead auditor","lead","auditor",NA,NA,NA
 3,"lead business analyst","lead busi analyst","lead","busi","analyst",NA,NA
-2,"head cashier","head cashier","head","cashier",NA,NA,NA
+2,"head cashier","head cashier","leader","cashier",NA,NA,NA
 2,"lead consultant","lead consult","lead","consult",NA,NA,NA
 2,"lead cook","lead cook","lead","cook",NA,NA,NA
 2,"lead designer","lead design","lead","design",NA,NA,NA
@@ -2833,7 +2833,7 @@
 2,"intern legislation","intern legisl","intern","legisl",NA,NA,NA
 1,"teacher","teacher","teacher",NA,NA,NA,NA
 1,"teacher","teacher","teacher",NA,NA,NA,NA
-1,"lector","lector","lector",NA,NA,NA,NA
+1,"lector","lector","reader",NA,NA,NA,NA
 1,"postman","postman","postman",NA,NA,NA,NA
 2,"level designer","level design","level","design",NA,NA,NA
 2,"liaison officer","liaison offic","liaison","offic",NA,NA,NA
@@ -3055,7 +3055,7 @@
 2,"occupational physician","occup physician","occup","physician",NA,NA,NA
 1,"collaborator","collabor","collabor",NA,NA,NA,NA
 2,"employee service","employe servic","employe","servic",NA,NA,NA
-1,"doctor","doctor","doctor",NA,NA,NA,NA
+1,"media","media","media",NA,NA,NA,NA
 2,"medical assistant","medic assist","medic","assist",NA,NA,NA
 2,"media buyer","media buyer","media","buyer",NA,NA,NA
 2,"media consultant","media consult","media","consult",NA,NA,NA
@@ -3070,12 +3070,12 @@
 1,"mediator","mediat","mediat",NA,NA,NA,NA
 1,"doctor","doctor","doctor",NA,NA,NA,NA
 1,"doctor","doctor","doctor",NA,NA,NA,NA
-1,"medical","medic","medic",NA,NA,NA,NA
+1,"doctor","doctor","doctor",NA,NA,NA,NA
 1,"doctor","doctor","doctor",NA,NA,NA,NA
 3,"medical administrative assistant","medic administr assist","medic","administr","assist",NA,NA
 2,"medical assistant","medic assist","medic","assist",NA,NA,NA
 2,"medical biller","medic biller","medic","biller",NA,NA,NA
-2,"medical coder","medic coder","medic","coder",NA,NA,NA
+2,"medical coder","medic coder","medic","programm",NA,NA,NA
 2,"medical director","medic director","medic","director",NA,NA,NA
 2,"medical doctor","medic doctor","medic","doctor",NA,NA,NA
 3,"medical laboratory technician","medic laboratori technician","medic","laboratori","technician",NA,NA
@@ -3185,7 +3185,7 @@
 2,"ndt technician","ndt technician","ndt","technician",NA,NA,NA
 1,"negotiator","negoti","negoti",NA,NA,NA,NA
 1,"network","network","network",NA,NA,NA,NA
-2,"network admin","network admin","network","admin",NA,NA,NA
+2,"network admin","network admin","network","administr",NA,NA,NA
 2,"network administrator","network administr","network","administr",NA,NA,NA
 2,"network analyst","network analyst","network","analyst",NA,NA,NA
 2,"network consultant","network consult","network","consult",NA,NA,NA
@@ -3212,7 +3212,7 @@
 1,"unemployed","unemploy","unemploy",NA,NA,NA,NA
 2,"noc engineer","noc engin","noc","engin",NA,NA,NA
 1,"nothnig","nothnig","nothnig",NA,NA,NA,NA
-3,"non executive director","non execut director","non","execut","director",NA,NA
+3,"non executive director","non execut director","nothnig","execut","director",NA,NA
 1,"nothing","noth","noth",NA,NA,NA,NA
 2,"notary public","notari public","notari","public",NA,NA,NA
 1,"nothing","noth","noth",NA,NA,NA,NA
@@ -3232,14 +3232,14 @@
 1,"dentist","dentist","dentist",NA,NA,NA,NA
 1,"consulant","consul","consul",NA,NA,NA,NA
 1,"officer","offic","offic",NA,NA,NA,NA
-2,"office admin","offic admin","offic","admin",NA,NA,NA
+2,"office admin","offic admin","offic","administr",NA,NA,NA
 2,"office administrator","offic administr","offic","administr",NA,NA,NA
 2,"office assistant","offic assist","offic","assist",NA,NA,NA
 2,"office clerk","offic clerk","offic","clerk",NA,NA,NA
 2,"office coordinator","offic coordin","offic","coordin",NA,NA,NA
 2,"office engineer","offic engin","offic","engin",NA,NA,NA
 2,"office manager","offic manag","offic","manag",NA,NA,NA
-2,"office mgr","offic mgr","offic","mgr",NA,NA,NA
+2,"office mgr","offic mgr","offic","manag",NA,NA,NA
 2,"office staff","offic staff","offic","staff",NA,NA,NA
 2,"office supervisor","offic supervisor","offic","supervisor",NA,NA,NA
 2,"office worker","offic worker","offic","worker",NA,NA,NA
@@ -3308,7 +3308,7 @@
 2,"outside sales","outsid sale","outsid","sale",NA,NA,NA
 3,"outside sales representative","outsid sale repres","outsid","sale","repres",NA,NA
 1,"worker","worker","worker",NA,NA,NA,NA
-2,"overnight stocker","overnight stocker","overnight","stocker",NA,NA,NA
+2,"overnight stocker","overnight stocker","overnight","store",NA,NA,NA
 1,"owner","owner","owner",NA,NA,NA,NA
 2,"owner operator","owner oper","owner","oper",NA,NA,NA
 5,"owner  and  manager","owner and manag","owner","manag",NA,NA,NA
@@ -3349,7 +3349,7 @@
 3,"passenger service agent","passeng servic agent","passeng","servic","agent",NA,NA
 2,"past president","past presid","past","presid",NA,NA,NA
 1,"pastor","pastor","pastor",NA,NA,NA,NA
-2,"pastry chef","pastri chef","pastri","chef",NA,NA,NA
+2,"pastry chef","pastri chef","pastri","chief",NA,NA,NA
 2,"pastry cook","pastri cook","pastri","cook",NA,NA,NA
 2,"patent attorney","patent attorney","patent","attorney",NA,NA,NA
 3,"patient access representative","patient access repres","patient","access","repres",NA,NA
@@ -4096,8 +4096,8 @@
 2,"sales professional","sale profession","sale","profession",NA,NA,NA
 3,"sales project manager","sale project manag","sale","project","manag",NA,NA
 2,"sales promoter","sale promot","sale","promot",NA,NA,NA
-2,"sales rep","sale rep","sale","rep",NA,NA,NA
-2,"sales rep","sale rep","sale","rep",NA,NA,NA
+2,"sales rep","sale rep","sale","report",NA,NA,NA
+2,"sales rep","sale rep","sale","report",NA,NA,NA
 2,"sales representative","sale repres","sale","repres",NA,NA,NA
 2,"sales specialist","sale specialist","sale","specialist",NA,NA,NA
 2,"sales supervisor","sale supervisor","sale","supervisor",NA,NA,NA
@@ -4194,7 +4194,7 @@
 2,"senior associate","senior associ","senior","associ",NA,NA,NA
 3,"senior associate consultant","senior associ consult","senior","associ","consult",NA,NA
 2,"senior attorney","senior attorney","senior","attorney",NA,NA,NA
-3,"senior audit associate","senior audit associ","senior","audit","associ",NA,NA
+3,"senior audit associate","senior audit associ","senior","auditor","associ",NA,NA
 2,"senior auditor","senior auditor","senior","auditor",NA,NA,NA
 3,"senior brand manager","senior brand manag","senior","brand","manag",NA,NA
 3,"senior business analyst","senior busi analyst","senior","busi","analyst",NA,NA
@@ -4462,8 +4462,8 @@
 2,"sound engineer","sound engin","sound","engin",NA,NA,NA
 2,"sourcing manager","sourc manag","sourc","manag",NA,NA,NA
 2,"sourcing specialist","sourc specialist","sourc","specialist",NA,NA,NA
-1,"chef","chef","chef",NA,NA,NA,NA
-1,"chef","chef","chef",NA,NA,NA,NA
+1,"chef","chef","chief",NA,NA,NA,NA
+1,"chef","chef","chief",NA,NA,NA,NA
 2,"spa director","spa director","spa","director",NA,NA,NA
 2,"spa manager","spa manag","spa","manag",NA,NA,NA
 2,"spa therapist","spa therapist","spa","therapist",NA,NA,NA
@@ -4489,32 +4489,32 @@
 2,"senior manager","senior manag","senior","manag",NA,NA,NA
 3,"senior project manager","senior project manag","senior","project","manag",NA,NA
 3,"senior software engineer","senior softwar engin","senior","softwar","engin",NA,NA
-3,"sr. account executive","sr account execut","sr","account","execut",NA,NA
-3,"sr. account manager","sr account manag","sr","account","manag",NA,NA
+3,"sr. account executive","sr account execut","senior","account","execut",NA,NA
+3,"sr. account manager","sr account manag","senior","account","manag",NA,NA
 2,"senior accountant","senior account","senior","account",NA,NA,NA
 3,"senior administrative assistant","senior administr assist","senior","administr","assist",NA,NA
 2,"senior analyst","senior analyst","senior","analyst",NA,NA,NA
-3,"sr. art director","sr art director","sr","art","director",NA,NA
+3,"sr. art director","sr art director","senior","art","director",NA,NA
 2,"senior associate","senior associ","senior","associ",NA,NA,NA
 3,"senior business analyst","senior busi analyst","senior","busi","analyst",NA,NA
 2,"senior sultant","senior sultant","senior","sultant",NA,NA,NA
-3,"sr. design engineer","sr design engin","sr","design","engin",NA,NA
-3,"sr. electrical engineer","sr electr engin","sr","electr","engin",NA,NA
+3,"sr. design engineer","sr design engin","senior","design","engin",NA,NA
+3,"sr. electrical engineer","sr electr engin","senior","electr","engin",NA,NA
 2,"senior engineer","senior engin","senior","engin",NA,NA,NA
 2,"senior executive","senior execut","senior","execut",NA,NA,NA
-3,"sr. financial analyst","sr financi analyst","sr","financi","analyst",NA,NA
-3,"sr. loan officer","sr loan offic","sr","loan","offic",NA,NA
+3,"sr. financial analyst","sr financi analyst","senior","financi","analyst",NA,NA
+3,"sr. loan officer","sr loan offic","senior","loan","offic",NA,NA
 2,"senior manager","senior manag","senior","manag",NA,NA,NA
-3,"sr. manufacturing engineer","sr manufactur engin","sr","manufactur","engin",NA,NA
-3,"sr. mechanical engineer","sr mechan engin","sr","mechan","engin",NA,NA
-3,"sr. network engineer","sr network engin","sr","network","engin",NA,NA
+3,"sr. manufacturing engineer","sr manufactur engin","senior","manufactur","engin",NA,NA
+3,"sr. mechanical engineer","sr mechan engin","senior","mechan","engin",NA,NA
+3,"sr. network engineer","sr network engin","senior","network","engin",NA,NA
 3,"senior project manager","senior project manag","senior","project","manag",NA,NA
-3,"sr. program manager","sr program manag","sr","program","manag",NA,NA
-3,"sr. project engineer","sr project engin","sr","project","engin",NA,NA
+3,"sr. program manager","sr program manag","senior","program","manag",NA,NA
+3,"sr. project engineer","sr project engin","senior","project","engin",NA,NA
 3,"senior project manager","senior project manag","senior","project","manag",NA,NA
 3,"senior software developer","senior softwar develop","senior","softwar","develop",NA,NA
 3,"senior software engineer","senior softwar engin","senior","softwar","engin",NA,NA
-3,"sr. systems engineer","sr system engin","sr","system","engin",NA,NA
+3,"sr. systems engineer","sr system engin","senior","system","engin",NA,NA
 3,"senior vice president","senior vice presid","senior","vice","presid",NA,NA
 2,"senior engineer","senior engin","senior","engin",NA,NA,NA
 2,"senior executive","senior execut","senior","execut",NA,NA,NA
@@ -4539,10 +4539,10 @@
 2,"staff sergeant","staff sergeant","staff","sergeant",NA,NA,NA
 3,"staff software engineer","staff softwar engin","staff","softwar","engin",NA,NA
 2,"staff writer","staff writer","staff","writer",NA,NA,NA
-2,"staffing consultant","staf consult","staf","consult",NA,NA,NA
-2,"staffing coordinator","staf coordin","staf","coordin",NA,NA,NA
-2,"staffing manager","staf manag","staf","manag",NA,NA,NA
-2,"staffing specialist","staf specialist","staf","specialist",NA,NA,NA
+2,"staffing consultant","staf consult","staff","consult",NA,NA,NA
+2,"staffing coordinator","staf coordin","staff","coordin",NA,NA,NA
+2,"staffing manager","staf manag","staff","manag",NA,NA,NA
+2,"staffing specialist","staf specialist","staff","specialist",NA,NA,NA
 1,"trainee","traine","traine",NA,NA,NA,NA
 1,"stage","stage","stage",NA,NA,NA,NA
 2,"stage director","stage director","stage","director",NA,NA,NA
@@ -4678,7 +4678,7 @@
 1,"nurse","nurs","nurs",NA,NA,NA,NA
 1,"nurse","nurs","nurs",NA,NA,NA,NA
 2,"system specialist","system specialist","system","specialist",NA,NA,NA
-2,"system admin","system admin","system","admin",NA,NA,NA
+2,"system admin","system admin","system","administr",NA,NA,NA
 2,"system administrator","system administr","system","administr",NA,NA,NA
 2,"system analyst","system analyst","system","analyst",NA,NA,NA
 4,"system and network administrator","system and network administr","system","network","administr",NA,NA

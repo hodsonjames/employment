@@ -3055,7 +3055,7 @@ doctor,1,médecin
 occupational physician,2,médecin du travail
 collaborator,1,medewerker
 employee service,2,medewerker bediening
-doctor,1,media
+media,1,media
 medical assistant,2,media assistant
 media buyer,2,media buyer
 media consultant,2,media consultant
@@ -3070,7 +3070,7 @@ media supervisor,2,media supervisor
 mediator,1,mediator
 doctor,1,medic
 doctor,1,medica
-medical,1,médica
+doctor,1,médica
 doctor,1,medical
 medical administrative assistant,3,medical administrative assistant
 medical assistant,2,medical assistant
