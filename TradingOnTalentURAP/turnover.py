@@ -56,13 +56,44 @@ bookval = pd.read_csv("/Users/jacquelinewood/Documents/URAP/Compustat.csv")
 bookval['ceqq'] = bookval['ceqq'] * 1000 #said it was in millions but this is what makes it equal intermediate values?
 bookval['Year + Month'] = [int(str(date)[:-2]) for date in bookval['datadate'].values]
 
-merged = pd.merge(dat, bookval, how = 'outer', left_on = ['TICKER','Year + Month'], right_on = ['tic','Year + Month'])
-merged = merged[['date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','Size','datafqtr','ceqq']]
-sorted_merged = merged.sort_values(by = ['TICKER','date'])
-frontfilled = sorted_merged[['datafqtr','ceqq']].fillna(method='ffill')
-sorted_merged[['datafqtr','ceqq']] = frontfilled
+bookval.loc[bookval['tic'] == 'GOOGL', 'tic'] = 'GOOG'
 
-# possibly keep book values in dictionary - BM seems to still be off
+merged = pd.merge(dat, bookval, how = 'outer', left_on = ['TICKER','Year + Month'], right_on = ['tic','Year + Month'])
+merged = merged.sort_values(by = ['TICKER','date'])
+
+# BMR
+
+def item(value):
+    return value
+
+quarters = merged.groupby(['TICKER','Year + Month'])['datafqtr','ceqq'].agg(item)
+
+quarts = []
+ticks = quarters.index.get_level_values('TICKER').unique()
+for tic in ticks:
+    quart = quarters.loc[tic]
+    begin_mos = quart.loc[quart['ceqq'] > 0 ].index.values
+    quart['TICKER'] = np.repeat(tic,len(quart))
+    frontfill = quart[['datafqtr','ceqq']].fillna(method='ffill')
+    quart[['datafqtr','ceqq']] = frontfill
+    
+    #addition
+    for mo in begin_mos:
+        quart  = quart.set_value(mo, 'ceqq', np.nan)
+    frontfill_ceqqs = quart[['ceqq']].fillna(method='ffill')
+    quart[['ceqq']] = frontfill_ceqqs
+
+    backfill_ceqqs = quart[['ceqq']].fillna(method='bfill')
+    quart[['ceqq']] = backfill_ceqqs
+    
+    
+    quarts.append(quart)
+back = pd.concat(quarts).reset_index().sort_values(by = ['TICKER','Year + Month'])
+merged = pd.merge(merged,back,on=['TICKER','Year + Month']).drop(['datafqtr_x','ceqq_x'], axis=1).rename(columns={'datafqtr_y': 'datafqtr','ceqq_y':'ceqq'})
+
+# how to handle something with no previous (like 200001) - just keep value?
+
+sorted_merged = merged.sort_values(by = ['TICKER','date'])
 
 def calc_bmratio(row):
     book_val = row['ceqq']
@@ -78,6 +109,14 @@ for index, row in sorted_merged.iterrows():
 
 sorted_merged['Book to Market Ratio'] = ratio
 
+def to_float(val):
+    try:
+        return float(val)
+    except:
+        return np.nan
+
+sorted_merged['Book to Market Ratio'] = [to_float(bmr) for bmr in sorted_merged['Book to Market Ratio'].values]
+
 grouped_industries = sorted_merged.groupby(['TICKER'])['NAICS'].apply(max)
 
 industries = dict(grouped_industries)
@@ -91,14 +130,13 @@ sorted_merged['NAICS'] = ind
 
 industry_dummy = pd.get_dummies(sorted_merged['NAICS'])
 
-#firm_chars = sorted_merged[['TICKER','Year + Month','Size','Book to Market Ratio']]
-firm_chars = pd.concat([firm_chars,industry_dummy], axis=1)
-firm_chars = pd.merge(firm_chars,turnover[['Stock Symbol','Year + Month','Turnover']],'inner',left_on=['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month']).drop(['TICKER','Year + Month','Stock Symbol'], axis=1)
+firm_chars = pd.concat([sorted_merged[['TICKER','Year + Month','Size','Book to Market Ratio']],industry_dummy], axis=1)
+firm_chars = pd.merge(firm_chars,turnover[['Stock Symbol','Year + Month','Turnover']],'inner',left_on=['TICKER','Year + Month'],right_on = ['Stock Symbol','Year + Month']).drop(['Stock Symbol'], axis=1)
 firm_chars = firm_chars.dropna()
 
 # 5. Compute abnormal turnover : regress turnover on firm characteristics and take residuals
 Y = firm_chars[['Turnover']]
-X = firm_chars.drop(['Turnover','date','TICKER','NAICS','PRC','SHROUT','Year + Month','Market Value','datafqtr','ceqq'],axis=1)
+X = firm_chars.drop(['Turnover','TICKER','Year + Month'],axis=1)
 
 reg = LinearRegression().fit(X, Y)
 predictions = reg.predict(X)
@@ -110,12 +148,6 @@ sorted_merged = pd.merge(sorted_merged, firm_chars[['TICKER','Year + Month','abn
 # 6. Combine abnormal turnover with returns, using a lag (1 mo/2 mo/3 mo/6 mo)
 
 returns = returns.sort_values(by = ['TICKER','date'])
-
-def to_float(item):
-    try:
-        return float(item)
-    except:
-        return np.nan
 
 returns['RET'] = [to_float(ret) for ret in returns['RET'].values]
 
@@ -161,6 +193,8 @@ pairs = [('Turnover','RET'),('Turnover','abnormal_return'),('abnormal_turnover',
 regressions = {}
 for pair in pairs:
     regressions[(pair[0],pair[1])] = run_return_regressions(pair[0],pair[1])
+
+# once I have these regressions - what do I do with them again?
 
 # Include performance in firm_chars
 
@@ -268,7 +302,4 @@ for year_mo in sorted_merged['Year + Month'].unique():
     long = np.average(longs['abnormal_turnover'])
     net_return = long - short
     portfolios[year_mo] = (net_return)
-
-
-
 
