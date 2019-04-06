@@ -1,6 +1,5 @@
 executive assistant to ceo
 md and ceo
-personal assistant to ceo
 qa and qc engineer
 qa and qc inspector
 qa and qc manager
@@ -43,7 +42,7 @@ mba candidate
 mba student
 national key account manager
 owner and ceo
-personal assistant to managing director
+personal assistant to ceo
 president  and  ceo
 president and ceo
 president ceo
@@ -202,7 +201,6 @@ certified legal intern
 certified massage therapist
 certified medical assistant
 certified nursing assistant
-certified personal trainer
 certified pharmacy technician
 certified public accountant
 cfo
@@ -258,6 +256,7 @@ corretor imobiliário
 credit risk analyst
 csa
 csr
+css
 cto
 customer account manager
 customer care agent
@@ -297,6 +296,7 @@ daglig leder
 data entry clerk
 data entry operator
 data entry specialist
+deo
 deputy general manager
 deputy managing director
 deputy project manager
@@ -353,7 +353,6 @@ executive administrative assistant
 executive assistant manager
 executive assistant to the president
 executive board member
-executive personal assistant
 executive sales representative
 executive sous chef
 executive team leader
@@ -615,8 +614,7 @@ patient care technician
 patient service representative
 pca
 pdg
-personal care assistant
-personal care attendant
+personal assistant to managing director
 pharmaceutical sales representative
 php developer
 php programmer
@@ -629,6 +627,8 @@ postdoctoral research associate
 postdoctoral research fellow
 pr assistant
 pr consultant
+pr intern
+pr manager
 président directeur général
 primary school teacher
 principal software engineer
@@ -1266,7 +1266,6 @@ assistente administrativo
 assistente comercial
 assistente contábil
 assistente de compras
-assistente de departamento pessoal
 assistente de logística
 assistente de marketing
 assistente de produção
@@ -1334,7 +1333,6 @@ auxiliar contable
 auxiliar de compras
 auxiliar de contabilidad
 auxiliar de contabilidade
-auxiliar de departamento pessoal
 auxiliar de enfermagem
 auxiliar de enfermeria
 auxiliar de escritorio
@@ -1460,6 +1458,7 @@ catering manager
 center director
 center manager
 centre manager
+certified personal trainer
 chairman of the board
 change manager
 channel manager
@@ -1680,6 +1679,7 @@ country manager
 court clerk
 court reporter
 courtesy clerk
+cpa
 cr
 crane operator
 creative designer
@@ -1993,6 +1993,7 @@ executive engineer
 executive housekeeper
 executive manager
 executive officer
+executive personal assistant
 executive producer
 executive recruiter
 executive sales
@@ -2753,12 +2754,8 @@ peer advisor
 peer mentor
 peer tutor
 pensionist
-personal assistant
-personal banker
-personal trainer
-personnel manager
-personnel officer
-persoonlijk begeleider
+personal care assistant
+personal care attendant
 petroleum engineer
 petroleum landman
 ph.d. student
@@ -2806,8 +2803,6 @@ postdoctoral associate
 postdoctoral fellow
 postdoctoral researcher
 pr
-pr intern
-pr manager
 practica profesional
 práctica profesional
 practice administrator
@@ -3893,6 +3888,7 @@ assist
 assist.
 assistent
 assistente
+assistente de departamento pessoal
 assistentin
 associate
 associé
@@ -3921,6 +3917,7 @@ autónomo
 autônomo
 auxiliar
 auxiliar de caja
+auxiliar de departamento pessoal
 avocat
 avocate
 avukat
@@ -4110,12 +4107,10 @@ counsellor
 counselor
 courier
 cozinheira
-cpa
 creative
 creator
 crew
 croupier
-css
 cuisinier
 cuoco
 curator
@@ -4132,7 +4127,6 @@ delivery
 demonstrator
 dentist
 dentista
-deo
 department head
 dependienta
 dependiente
@@ -4689,6 +4683,12 @@ peon
 peón
 performer
 periodista
+personal assistant
+personal banker
+personal trainer
+personnel manager
+personnel officer
+persoonlijk begeleider
 pesquisador
 pg
 pharmacien

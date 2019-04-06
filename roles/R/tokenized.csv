@@ -1,12 +1,11 @@
 "n","org_trans","stemm","tokens1","tokens2","tokens3","tokens4","tokens5"
 5,"executive assistant to chief executive officer","execut assist to chief execut offic","execut","assist","chief","execut","offic"
 5,"managing director and chief executive officer","manag director and chief execut offic","manag","director","chief","execut","offic"
-5,"personal assistant to chief executive officer","person assist to chief execut offic","person","assist","chief","execut","offic"
 5,"quality assurance and quality control engineer","qualiti assur and qualiti control engin","qualiti","assur","qualiti","control","engin"
 5,"quality assurance and quality control inspector","qualiti assur and qualiti control inspector","qualiti","assur","qualiti","control","inspector"
 5,"quality assurance and quality control manager","qualiti assur and qualiti control manag","qualiti","assur","qualiti","control","manag"
 5,"social media and online marketing manager","social media and onlin market manag","social","media","onlin","market","manag"
-4,"computer advisor it and technology matters","comput advis it and technolog matter","comput","advis","technolog","matter",NA
+4,"computer advisor it and technology matters","comput advis it and technolog matter","comput","advis","tech","matter",NA
 4,"assistant front office manager","assist front offic manag","assist","front","offic","manag",NA
 4,"bilingual customer service representative","bilingu custom servic repres","biling","custom","servic","repres",NA
 4,"chief executive officer  and  founder","chief execut offic and founder","chief","execut","offic","found",NA
@@ -44,7 +43,7 @@
 4,"master of business administration student","master of busi administr student","master","busi","administr","student",NA
 4,"national key account manager","nation key account manag","nation","key","account","manag",NA
 4,"owner and chief executive officer","owner and chief execut offic","owner","chief","execut","offic",NA
-4,"personal assistant to managing director","person assist to manag director","person","assist","manag","director",NA
+4,"chief executive officer assistant","chief execut offic assist","chief","execut","offic","assist",NA
 4,"president  and  chief executive officer","presid and chief execut offic","presid","chief","execut","offic",NA
 4,"president and chief executive officer","presid and chief execut offic","presid","chief","execut","offic",NA
 4,"president chief executive officer","presid chief execut offic","presid","chief","execut","offic",NA
@@ -91,11 +90,11 @@
 3,"real estate agent","real estat agent","real","estat","agent",NA,NA
 3,"air traffic controller","air traffic control","air","traffic","control",NA,NA
 3,"aircraft maintenance engineer","aircraft mainten engin","aircraft","mainten","engin",NA,NA
-3,"aircraft maintenance technician","aircraft mainten technician","aircraft","mainten","technician",NA,NA
+3,"aircraft maintenance technician","aircraft mainten technician","aircraft","mainten","tech",NA,NA
 3,"chief executive officer","chief execut offic","chief","execut","offic",NA,NA
 3,"human resources analyst","human resourc analyst","human","resourc","analyst",NA,NA
 3,"rh analyst","human resources analyst","human","resourc","analyst",NA,NA
-3,"technical support analyst","technic support analyst","technic","support","analyst",NA,NA
+3,"technical support analyst","technic support analyst","tech","support","analyst",NA,NA
 3,"application support analyst","applic support analyst","applic","support","analyst",NA,NA
 3,"application support engineer","applic support engin","applic","support","engin",NA,NA
 3,"architectural project manager","architectur project manag","architectur","project","manag",NA,NA
@@ -154,7 +153,7 @@
 3,"associate system engineer","associ system engin","associ","system","engin",NA,NA
 3,"associate vice president","associ vice presid","associ","vice","presid",NA,NA
 3,"asstistant vice president","asstist vice presid","assist","vice","presid",NA,NA
-3,"audio visual technician","audio visual technician","audio","visual","technician",NA,NA
+3,"audio visual technician","audio visual technician","audio","visual","tech",NA,NA
 3,"human resources assistant","human resourc assist","human","resourc","assist",NA,NA
 3,"fellowship of scientific initiation","fellowship of scientif initi","fellowship","scienc","initi",NA,NA
 3,"box office assistant","box offic assist","box","offic","assist",NA,NA
@@ -187,7 +186,7 @@
 3,"business systems analyst","busi system analyst","busi","system","analyst",NA,NA
 3,"business systems analyst","busi system analyst","busi","system","analyst",NA,NA
 3,"business systems consultant","busi system consult","busi","system","consult",NA,NA
-3,"business technology analyst","busi technolog analyst","busi","technolog","analyst",NA,NA
+3,"business technology analyst","busi technolog analyst","busi","tech","analyst",NA,NA
 3,"business unit manager","busi unit manag","busi","unit","manag",NA,NA
 3,"chief executive officer","chief execut offic","chief","execut","offic",NA,NA
 3,"chief executive officer","chief execut offic","chief","execut","offic",NA,NA
@@ -203,8 +202,7 @@
 3,"certified massage therapist","certifi massag therapist","certif","massag","therap",NA,NA
 3,"certified medical assistant","certifi medic assist","certif","medic","assist",NA,NA
 3,"certified nursing assistant","certifi nurs assist","certif","nurs","assist",NA,NA
-3,"certified personal trainer","certifi person trainer","certif","person","trainer",NA,NA
-3,"certified pharmacy technician","certifi pharmaci technician","certif","pharmac","technician",NA,NA
+3,"certified pharmacy technician","certifi pharmaci technician","certif","pharmac","tech",NA,NA
 3,"certified public accountant","certifi public account","certif","public","account",NA,NA
 3,"chief financial officer","chief financi offic","chief","financ","offic",NA,NA
 3,"chief commercial officer","chief commerci offic","chief","commerci","offic",NA,NA
@@ -216,8 +214,8 @@
 3,"chief medical officer","chief medic offic","chief","medic","offic",NA,NA
 3,"chief operations officer","chief oper offic","chief","oper","offic",NA,NA
 3,"chief operations officer","chief oper offic","chief","oper","offic",NA,NA
-3,"chief technical officer","chief technic offic","chief","technic","offic",NA,NA
-3,"chief technology officer","chief technolog offic","chief","technolog","offic",NA,NA
+3,"chief technical officer","chief technic offic","chief","tech","offic",NA,NA
+3,"chief technology officer","chief technolog offic","chief","tech","offic",NA,NA
 3,"child care worker","child care work","child","care","work",NA,NA
 3,"chief information officer","chief inform offic","chief","inform","offic",NA,NA
 3,"civil engineering intern","civil engin intern","civil","engin","intern",NA,NA
@@ -259,7 +257,8 @@
 3,"credit risk analyst","credit risk analyst","credit","risk","analyst",NA,NA
 3,"certified senior advisor","certifi senior advis","certif","senior","advis",NA,NA
 3,"customer service representative","custom servic repres","custom","servic","repres",NA,NA
-3,"chief technology officer","chief technolog offic","chief","technolog","offic",NA,NA
+3,"customer service system","custom servic system","custom","servic","system",NA,NA
+3,"chief technology officer","chief technolog offic","chief","tech","offic",NA,NA
 3,"customer account manager","custom account manag","custom","account","manag",NA,NA
 3,"customer care agent","custom care agent","custom","care","agent",NA,NA
 3,"customer care executive","custom care execut","custom","care","execut",NA,NA
@@ -298,12 +297,13 @@
 3,"data entry clerk","data entri clerk","data","entri","clerk",NA,NA
 3,"data entry operator","data entri oper","data","entri","oper",NA,NA
 3,"data entry specialist","data entri specialist","data","entri","specialist",NA,NA
+3,"data entry operator","data entri oper","data","entri","oper",NA,NA
 3,"deputy general manager","deputi general manag","deputi","general","manag",NA,NA
 3,"deputy managing director","deputi manag director","deputi","manag","director",NA,NA
 3,"deputy project manager","deputi project manag","deputi","project","manag",NA,NA
 3,"desktop support analyst","desktop support analyst","desktop","support","analyst",NA,NA
 3,"desktop support engineer","desktop support engin","desktop","support","engin",NA,NA
-3,"desktop support technician","desktop support technician","desktop","support","technician",NA,NA
+3,"desktop support technician","desktop support technician","desktop","support","tech",NA,NA
 3,"digital account manager","digit account manag","digit","account","manag",NA,NA
 3,"digital marketing consultant","digit market consult","digit","market","consult",NA,NA
 3,"digital marketing executive","digit market execut","digit","market","execut",NA,NA
@@ -320,7 +320,7 @@
 3,"director of food and beverage","director of food and beverag","director","food","beverag",NA,NA
 3,"hr director","human resources director","human","resourc","director",NA,NA
 3,"director of human resources","director of human resourc","director","human","resourc",NA,NA
-3,"director of information technology","director of inform technolog","director","inform","technolog",NA,NA
+3,"director of information technology","director of inform technolog","director","inform","tech",NA,NA
 3,"director of marketing and sales","director of market and sale","director","market","sale",NA,NA
 3,"director of sales and marketing","director of sale and market","director","sale","market",NA,NA
 3,"director of sales and marketing","director of sale and market","director","sale","market",NA,NA
@@ -338,7 +338,7 @@
 3,"electrical project engineer","electr project engin","electr","project","engin",NA,NA
 3,"elementary school teacher","elementari school teach","elementar","school","teach",NA,NA
 3,"embedded software engineer","embed softwar engin","embed","softwar","engin",NA,NA
-3,"emergency medical technician","emerg medic technician","emerg","medic","technician",NA,NA
+3,"emergency medical technician","emerg medic technician","emerg","medic","tech",NA,NA
 3,"english language instructor","english languag instructor","english","languag","instructor",NA,NA
 3,"english language teacher","english languag teach","english","languag","teach",NA,NA
 3,"english teaching assistant","english teach assist","english","teach","assist",NA,NA
@@ -354,7 +354,6 @@
 3,"executive assistant manager","execut assist manag","execut","assist","manag",NA,NA
 3,"executive assistant to the president","execut assist to the presid","execut","assist","presid",NA,NA
 3,"executive board member","execut board member","execut","board","member",NA,NA
-3,"executive personal assistant","execut person assist","execut","person","assist",NA,NA
 3,"executive sales representative","execut sale repres","execut","sale","repres",NA,NA
 3,"executive sous chef","execut sous chef","execut","sous","chef",NA,NA
 3,"executive team leader","execut team lead","execut","team","lead",NA,NA
@@ -373,7 +372,7 @@
 3,"field service engineer","field servic engin","field","servic","engin",NA,NA
 3,"field service manager","field servic manag","field","servic","manag",NA,NA
 3,"field service representative","field servic repres","field","servic","repres",NA,NA
-3,"field service technician","field servic technician","field","servic","technician",NA,NA
+3,"field service technician","field servic technician","field","servic","tech",NA,NA
 3,"finance and administration manager","financ and administr manag","financ","administr","manag",NA,NA
 3,"finance business partner","financ busi partner","financ","busi","partner",NA,NA
 3,"financial analyst intern","financi analyst intern","financ","analyst","intern",NA,NA
@@ -391,9 +390,9 @@
 3,"freelance art director","freelanc art director","freelanc","art","director",NA,NA
 3,"freelance audio engineer","freelanc audio engin","freelanc","audio","engin",NA,NA
 3,"freelance graphic designer","freelanc graphic design","freelanc","graphic","design",NA,NA
-3,"freelance lighting technician","freelanc light technician","freelanc","light","technician",NA,NA
+3,"freelance lighting technician","freelanc light technician","freelanc","light","tech",NA,NA
 3,"freelance makeup artist","freelanc makeup artist","freelanc","makeup","artist",NA,NA
-3,"freelance technical designer","freelanc technic design","freelanc","technic","design",NA,NA
+3,"freelance technical designer","freelanc technic design","freelanc","tech","design",NA,NA
 3,"freelance web developer","freelanc web develop","freelanc","web","develop",NA,NA
 3,"front desk agent","front desk agent","front","desk","agent",NA,NA
 3,"front desk assistant","front desk assist","front","desk","assist",NA,NA
@@ -504,10 +503,10 @@
 3,"information security manager","inform secur manag","inform","secur","manag",NA,NA
 3,"information security officer","inform secur offic","inform","secur","offic",NA,NA
 3,"information systems manager","inform system manag","inform","system","manag",NA,NA
-3,"information systems technician","inform system technician","inform","system","technician",NA,NA
-3,"information technology consultant","inform technolog consult","inform","technolog","consult",NA,NA
-3,"information technology manager","inform technolog manag","inform","technolog","manag",NA,NA
-3,"information technology specialist","inform technolog specialist","inform","technolog","specialist",NA,NA
+3,"information systems technician","inform system technician","inform","system","tech",NA,NA
+3,"information technology consultant","inform technolog consult","inform","tech","consult",NA,NA
+3,"information technology manager","inform technolog manag","inform","tech","manag",NA,NA
+3,"information technology specialist","inform technolog specialist","inform","tech","specialist",NA,NA
 3,"research and development engineer","research and develop engin","research","develop","engin",NA,NA
 3,"inside sales manager","insid sale manag","insid","sale","manag",NA,NA
 3,"inside sales representative","insid sale repres","insid","sale","repres",NA,NA
@@ -576,16 +575,16 @@
 3,"mechanical engineering co-op","mechan engin coop","mechan","engin","coop",NA,NA
 3,"mechanical engineering intern","mechan engin intern","mechan","engin","intern",NA,NA
 3,"medical administrative assistant","medic administr assist","medic","administr","assist",NA,NA
-3,"medical laboratory technician","medic laboratori technician","medic","laborator","technician",NA,NA
+3,"medical laboratory technician","medic laboratori technician","medic","laborator","tech",NA,NA
 3,"medical office assistant","medic offic assist","medic","offic","assist",NA,NA
 3,"medical sales representative","medic sale repres","medic","sale","repres",NA,NA
 3,"medical social worker","medic social work","medic","social","work",NA,NA
 3,"member board of directors","member board of director","member","board","director",NA,NA
-3,"member of technical staff","member of technic staff","member","technic","staff",NA,NA
+3,"member of technical staff","member of technic staff","member","tech","staff",NA,NA
 3,"member of the board of directors","member of the board of director","member","board","director",NA,NA
 3,"member services representative","member servic repres","member","servic","repres",NA,NA
 3,"member services representative","member servic repres","member","servic","repres",NA,NA
-3,"member technical staff","member technic staff","member","technic","staff",NA,NA
+3,"member technical staff","member technic staff","member","tech","staff",NA,NA
 3,"mental health clinician","mental health clinician","mental","health","clinician",NA,NA
 3,"mental health counselor","mental health counselor","mental","health","advis",NA,NA
 3,"mental health therapist","mental health therapist","mental","health","therap",NA,NA
@@ -604,7 +603,7 @@
 3,"network security engineer","network secur engin","network","secur","engin",NA,NA
 3,"network support engineer","network support engin","network","support","engin",NA,NA
 3,"new business manager","new busi manag","new","busi","manag",NA,NA
-3,"nuclear medicine technologist","nuclear medicin technologist","nuclear","medic","technolog",NA,NA
+3,"nuclear medicine technologist","nuclear medicin technologist","nuclear","medic","tech",NA,NA
 3,"online marketing manager","onlin market manag","onlin","market","manag",NA,NA
 3,"oracle database administrator","oracl databas administr","oracl","databas","administr",NA,NA
 3,"oracle data base administrator","oracl data base administr","oracl","data","administr",NA,NA
@@ -612,12 +611,11 @@
 3,"passenger service agent","passeng servic agent","passeng","servic","agent",NA,NA
 3,"patient access representative","patient access repres","patient","access","repres",NA,NA
 3,"patient care coordinator","patient care coordin","patient","care","coordin",NA,NA
-3,"patient care technician","patient care technician","patient","care","technician",NA,NA
+3,"patient care technician","patient care technician","patient","care","tech",NA,NA
 3,"patient service representative","patient servic repres","patient","servic","repres",NA,NA
 3,"personal care assistant","person care assist","person","care","assist",NA,NA
 3,"chief executive officer","chief execut offic","chief","execut","offic",NA,NA
-3,"personal care assistant","person care assist","person","care","assist",NA,NA
-3,"personal care attendant","person care attend","person","care","attend",NA,NA
+3,"assistant to managing director","assist to manag director","assist","manag","director",NA,NA
 3,"pharmaceutical sales representative","pharmaceut sale repres","pharmaceut","sale","repres",NA,NA
 3,"phewlett packard developer","phewlett packard develop","phewlett","packard","develop",NA,NA
 3,"phewlett packard programmer","phewlett packard programm","phewlett","packard","programm",NA,NA
@@ -630,6 +628,8 @@
 3,"postdoctoral research fellow","postdoctor research fellow","postdoctor","research","fellow",NA,NA
 3,"hr assistant","human resources assist","human","resourc","assist",NA,NA
 3,"hr consultant","human resources consult","human","resourc","consult",NA,NA
+3,"public relations intern","public relat intern","public","relat","intern",NA,NA
+3,"public relations manager","public relat manag","public","relat","manag",NA,NA
 3,"chief executive officer","chief execut offic","chief","execut","offic",NA,NA
 3,"primary school teacher","primari school teach","primar","school","teach",NA,NA
 3,"principal software engineer","princip softwar engin","princip","softwar","engin",NA,NA
@@ -681,7 +681,7 @@
 3,"quality assurance officer","qualiti assur offic","qualiti","assur","offic",NA,NA
 3,"quality assurance specialist","qualiti assur specialist","qualiti","assur","specialist",NA,NA
 3,"quality assurance supervisor","qualiti assur supervisor","qualiti","assur","supervis",NA,NA
-3,"quality assurance technician","qualiti assur technician","qualiti","assur","technician",NA,NA
+3,"quality assurance technician","qualiti assur technician","qualiti","assur","tech",NA,NA
 3,"quality control analyst","qualiti control analyst","qualiti","control","analyst",NA,NA
 3,"quality control chemist","qualiti control chemist","qualiti","control","chemist",NA,NA
 3,"quality control engineer","qualiti control engin","qualiti","control","engin",NA,NA
@@ -690,7 +690,7 @@
 3,"quality control officer","qualiti control offic","qualiti","control","offic",NA,NA
 3,"quality control specialist","qualiti control specialist","qualiti","control","specialist",NA,NA
 3,"quality control supervisor","qualiti control supervisor","qualiti","control","supervis",NA,NA
-3,"quality control technician","qualiti control technician","qualiti","control","technician",NA,NA
+3,"quality control technician","qualiti control technician","qualiti","control","tech",NA,NA
 3,"research and development engineer","research and develop engin","research","develop","engin",NA,NA
 3,"research and development manager","research and develop manag","research","develop","manag",NA,NA
 3,"real estate agent","real estat agent","real","estat","agent",NA,NA
@@ -751,7 +751,7 @@
 3,"sales team leader","sale team lead","sale","team","lead",NA,NA
 3,"sap abap consultant","sap abap consult","sap","abap","consult",NA,NA
 3,"sap sd consultant","sap sd consult","sap","sd","consult",NA,NA
-3,"sap technical consultant","sap technic consult","sap","technic","consult",NA,NA
+3,"sap technical consultant","sap technic consult","sap","tech","consult",NA,NA
 3,"school bus driver","school bus driver","school","bus","driver",NA,NA
 3,"school social worker","school social work","school","social","work",NA,NA
 3,"seasonal sales associate","season sale associ","season","sale","associ",NA,NA
@@ -843,11 +843,11 @@
 3,"senior systems engineer","senior system engin","senior","system","engin",NA,NA
 3,"senior tax accountant","senior tax account","senior","tax","account",NA,NA
 3,"senior tax manager","senior tax manag","senior","tax","manag",NA,NA
-3,"senior technical analyst","senior technic analyst","senior","technic","analyst",NA,NA
-3,"senior technical consultant","senior technic consult","senior","technic","consult",NA,NA
-3,"senior technical officer","senior technic offic","senior","technic","offic",NA,NA
-3,"senior technical specialist","senior technic specialist","senior","technic","specialist",NA,NA
-3,"senior technical writer","senior technic write","senior","technic","write",NA,NA
+3,"senior technical analyst","senior technic analyst","senior","tech","analyst",NA,NA
+3,"senior technical consultant","senior technic consult","senior","tech","consult",NA,NA
+3,"senior technical officer","senior technic offic","senior","tech","offic",NA,NA
+3,"senior technical specialist","senior technic specialist","senior","tech","specialist",NA,NA
+3,"senior technical writer","senior technic write","senior","tech","write",NA,NA
 3,"senior territory manager","senior territori manag","senior","territor","manag",NA,NA
 3,"senior test analyst","senior test analyst","senior","test","analyst",NA,NA
 3,"senior test engineer","senior test engin","senior","test","engin",NA,NA
@@ -912,23 +912,23 @@
 3,"supply chain manager","suppli chain manag","suppl","chain","manag",NA,NA
 3,"system and network administrator","system and network administr","system","network","administr",NA,NA
 3,"talent acquisition specialist","talent acquisit specialist","talent","acquisit","specialist",NA,NA
-3,"technical account manager","technic account manag","technic","account","manag",NA,NA
-3,"technical project manager","technic project manag","technic","project","manag",NA,NA
-3,"technical sales engineer","technic sale engin","technic","sale","engin",NA,NA
-3,"technical sales manager","technic sale manag","technic","sale","manag",NA,NA
-3,"technical sales representative","technic sale repres","technic","sale","repres",NA,NA
-3,"technical service engineer","technic servic engin","technic","servic","engin",NA,NA
-3,"technical services manager","technic servic manag","technic","servic","manag",NA,NA
-3,"technical support analyst","technic support analyst","technic","support","analyst",NA,NA
-3,"technical support engineer","technic support engin","technic","support","engin",NA,NA
-3,"technical support manager","technic support manag","technic","support","manag",NA,NA
-3,"technical support officer","technic support offic","technic","support","offic",NA,NA
-3,"technical support representative","technic support repres","technic","support","repres",NA,NA
-3,"technical support specialist","technic support specialist","technic","support","specialist",NA,NA
-3,"technical team lead","technic team lead","technic","team","lead",NA,NA
-3,"technical team lead","technic team lead","technic","team","lead",NA,NA
-3,"work safety technician","work safeti technician","work","safeti","technician",NA,NA
-3,"occupational safety technician","occup safeti technician","occup","safeti","technician",NA,NA
+3,"technical account manager","technic account manag","tech","account","manag",NA,NA
+3,"technical project manager","technic project manag","tech","project","manag",NA,NA
+3,"technical sales engineer","technic sale engin","tech","sale","engin",NA,NA
+3,"technical sales manager","technic sale manag","tech","sale","manag",NA,NA
+3,"technical sales representative","technic sale repres","tech","sale","repres",NA,NA
+3,"technical service engineer","technic servic engin","tech","servic","engin",NA,NA
+3,"technical services manager","technic servic manag","tech","servic","manag",NA,NA
+3,"technical support analyst","technic support analyst","tech","support","analyst",NA,NA
+3,"technical support engineer","technic support engin","tech","support","engin",NA,NA
+3,"technical support manager","technic support manag","tech","support","manag",NA,NA
+3,"technical support officer","technic support offic","tech","support","offic",NA,NA
+3,"technical support representative","technic support repres","tech","support","repres",NA,NA
+3,"technical support specialist","technic support specialist","tech","support","specialist",NA,NA
+3,"technical team lead","technic team lead","tech","team","lead",NA,NA
+3,"technical team lead","technic team lead","tech","team","lead",NA,NA
+3,"work safety technician","work safeti technician","work","safeti","tech",NA,NA
+3,"occupational safety technician","occup safeti technician","occup","safeti","tech",NA,NA
 3,"territory account manager","territori account manag","territor","account","manag",NA,NA
 3,"territory sales manager","territori sale manag","territor","sale","manag",NA,NA
 3,"territory sales representative","territori sale repres","territor","sale","repres",NA,NA
@@ -983,7 +983,7 @@
 2,"project manager","project manag","project","manag",NA,NA,NA
 2,"system administrator","system administr","system","administr",NA,NA,NA
 2,"territorial manager","territori manag","territor","manag",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"managing director","manag director","manag","director",NA,NA,NA
 2,"business manager","busi manag","busi","manag",NA,NA,NA
 2,"product manager","product manag","product","manag",NA,NA,NA
@@ -995,7 +995,7 @@
 2,"customer service","custom servic","custom","servic",NA,NA,NA
 2,"store manager","store manag","store","manag",NA,NA,NA
 2,"general manager","general manag","general","manag",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"construction worker","construct work","construct","work",NA,NA,NA
 2,"general workers","general work","general","work",NA,NA,NA
 2,"headhunting consultant","headhunt consult","headhunt","consult",NA,NA,NA
@@ -1041,7 +1041,7 @@
 2,"accounting specialist","account specialist","account","specialist",NA,NA,NA
 2,"accounting staff","account staff","account","staff",NA,NA,NA
 2,"accounting supervisor","account supervisor","account","supervis",NA,NA,NA
-2,"accounting technician","account technician","account","technician",NA,NA,NA
+2,"accounting technician","account technician","account","tech",NA,NA,NA
 2,"account manager","account manag","account","manag",NA,NA,NA
 2,"accounts administrator","account administr","account","administr",NA,NA,NA
 2,"accounts assistant","account assist","account","assist",NA,NA,NA
@@ -1121,7 +1121,7 @@
 2,"accounting assistant","account assist","account","assist",NA,NA,NA
 2,"aircraft engineer","aircraft engin","aircraft","engin",NA,NA,NA
 2,"aircraft mechanic","aircraft mechan","aircraft","mechan",NA,NA,NA
-2,"aircraft technician","aircraft technician","aircraft","technician",NA,NA,NA
+2,"aircraft technician","aircraft technician","aircraft","tech",NA,NA,NA
 2,"general assistant","general assist","general","assist",NA,NA,NA
 2,"managing director","manag director","manag","director",NA,NA,NA
 2,"allround employee","allround employe","allround","employe",NA,NA,NA
@@ -1175,13 +1175,13 @@
 2,"architectural assistant","architectur assist","architectur","assist",NA,NA,NA
 2,"architectural designer","architectur design","architectur","design",NA,NA,NA
 2,"architectural intern","architectur intern","architectur","intern",NA,NA,NA
-2,"architectural technician","architectur technician","architectur","technician",NA,NA,NA
+2,"architectural technician","architectur technician","architectur","tech",NA,NA,NA
 2,"area coordinator","area coordin","region","coordin",NA,NA,NA
 2,"area director","area director","region","director",NA,NA,NA
 2,"area manager","area manag","region","manag",NA,NA,NA
 2,"area supervisor","area supervisor","region","supervis",NA,NA,NA
 2,"army officer","armi offic","armi","offic",NA,NA,NA
-2,"technical architect","technic architect","technic","architect",NA,NA,NA
+2,"technical architect","technic architect","tech","architect",NA,NA,NA
 2,"art director","art director","art","director",NA,NA,NA
 2,"art instructor","art instructor","art","instructor",NA,NA,NA
 2,"art teacher","art teach","art","teach",NA,NA,NA
@@ -1213,7 +1213,7 @@
 2,"production assistant","product assist","product","assist",NA,NA,NA
 2,"sales assistant","sale assist","sale","assist",NA,NA,NA
 2,"legal assistant","legal assist","legal","assist",NA,NA,NA
-2,"assembly technician","assembl technician","assembl","technician",NA,NA,NA
+2,"assembly technician","assembl technician","assembl","tech",NA,NA,NA
 2,"communications adviser","communic advis","communic","advis",NA,NA,NA
 2,"press advisor","press advis","press","advis",NA,NA,NA
 2,"assistant manager","assist manag","assist","manag",NA,NA,NA
@@ -1267,7 +1267,6 @@
 2,"commercial assistant","commerci assist","commerci","assist",NA,NA,NA
 2,"accounting assistant","account assist","account","assist",NA,NA,NA
 2,"shopping assistant","shop assist","shop","assist",NA,NA,NA
-2,"personal assistant","person assist","person","assist",NA,NA,NA
 2,"logistic assistant","logist assist","logist","assist",NA,NA,NA
 2,"marketing assistant","market assist","market","assist",NA,NA,NA
 2,"production assistant","product assist","product","assist",NA,NA,NA
@@ -1278,7 +1277,7 @@
 2,"legal assistant","legal assist","legal","assist",NA,NA,NA
 2,"operational assistant","oper assist","oper","assist",NA,NA,NA
 2,"social worker","social work","social","work",NA,NA,NA
-2,"technical assistant","technic assist","technic","assist",NA,NA,NA
+2,"technical assistant","technic assist","tech","assist",NA,NA,NA
 2,"assistant manager","assist manag","assist","manag",NA,NA,NA
 2,"associate analyst","associ analyst","associ","analyst",NA,NA,NA
 2,"associate architect","associ architect","associ","architect",NA,NA,NA
@@ -1323,7 +1322,7 @@
 2,"senior auditor","senior auditor","senior","auditor",NA,NA,NA
 2,"intern auditor","intern auditor","intern","auditor",NA,NA,NA
 2,"automation engineer","autom engin","autom","engin",NA,NA,NA
-2,"automotive technician","automot technician","automot","technician",NA,NA,NA
+2,"automotive technician","automot technician","automot","tech",NA,NA,NA
 2,"administrative assistant","administr assist","administr","assist",NA,NA,NA
 2,"administrative assistant","administr assist","administr","assist",NA,NA,NA
 2,"holiday assistant","holiday assist","holid","assist",NA,NA,NA
@@ -1335,7 +1334,6 @@
 2,"purchasing assistant","purchas assist","purchas","assist",NA,NA,NA
 2,"accounting clerk","account clerk","account","clerk",NA,NA,NA
 2,"accounting clerk","account clerk","account","clerk",NA,NA,NA
-2,"personal assistant","person assist","person","assist",NA,NA,NA
 2,"nursing assistant","nurs assist","nurs","assist",NA,NA,NA
 2,"nursing assistant","nurs assist","nurs","assist",NA,NA,NA
 2,"office assistant","offic assist","offic","assist",NA,NA,NA
@@ -1347,7 +1345,7 @@
 2,"financial assistant","financi assist","financ","assist",NA,NA,NA
 2,"assistant coach","assist coach","assist","coach",NA,NA,NA
 2,"department manager","depart manag","depart","manag",NA,NA,NA
-2,"avionics technician","avion technician","avion","technician",NA,NA,NA
+2,"avionics technician","avion technician","avion","tech",NA,NA,NA
 2,"kitchen assistant","kitchen assist","kitchen","assist",NA,NA,NA
 2,"production assistant","product assist","product","assist",NA,NA,NA
 2,"business analyst","busi analyst","busi","analyst",NA,NA,NA
@@ -1434,10 +1432,10 @@
 2,"cad drafter","cad drafter","cad","drafter",NA,NA,NA
 2,"cad engineer","cad engin","cad","engin",NA,NA,NA
 2,"cad operator","cad oper","cad","oper",NA,NA,NA
-2,"fall technician","fall technician","fall","technician",NA,NA,NA
+2,"fall technician","fall technician","fall","tech",NA,NA,NA
 2,"sales executive","sale execut","sale","execut",NA,NA,NA
 2,"cake decorator","cake decor","cake","decor",NA,NA,NA
-2,"calibration technician","calibr technician","calibr","technician",NA,NA,NA
+2,"calibration technician","calibr technician","calibr","tech",NA,NA,NA
 2,"call center","call center","call","center",NA,NA,NA
 2,"callcenter agent","callcent agent","callcent","agent",NA,NA,NA
 2,"camera operator","camera oper","camer","oper",NA,NA,NA
@@ -1461,6 +1459,7 @@
 2,"center director","center director","center","director",NA,NA,NA
 2,"center manager","center manag","center","manag",NA,NA,NA
 2,"center manager","center manag","center","manag",NA,NA,NA
+2,"certified trainer","certifi trainer","certif","trainer",NA,NA,NA
 2,"chairman of the board","chairman of the board","chairman","board",NA,NA,NA
 2,"change manager","chang manag","chang","manag",NA,NA,NA
 2,"channel manager","channel manag","channel","manag",NA,NA,NA
@@ -1600,7 +1599,7 @@
 2,"computer specialist","comput specialist","comput","specialist",NA,NA,NA
 2,"computer teacher","comput teach","comput","teach",NA,NA,NA
 2,"computer teacher","comput teach","comput","teach",NA,NA,NA
-2,"computer technician","comput technician","comput","technician",NA,NA,NA
+2,"computer technician","comput technician","comput","tech",NA,NA,NA
 2,"concept artist","concept artist","concept","artist",NA,NA,NA
 2,"work supervisor","work supervisor","work","supervis",NA,NA,NA
 2,"conference coordinator","confer coordin","confer","coordin",NA,NA,NA
@@ -1625,7 +1624,7 @@
 2,"business consultant","busi consult","busi","consult",NA,NA,NA
 2,"sales consultant","sale consult","sale","consult",NA,NA,NA
 2,"senior advisor","senior advis","senior","advis",NA,NA,NA
-2,"technical advisor","technic advis","technic","advis",NA,NA,NA
+2,"technical advisor","technic advis","tech","advis",NA,NA,NA
 2,"business consultant","busi consult","busi","consult",NA,NA,NA
 2,"sales consultant","sale consult","sale","consult",NA,NA,NA
 2,"general counter","general counter","general","count",NA,NA,NA
@@ -1681,6 +1680,7 @@
 2,"court clerk","court clerk","court","clerk",NA,NA,NA
 2,"court reporter","court report","court","report",NA,NA,NA
 2,"courtesy clerk","courtesi clerk","courtes","clerk",NA,NA,NA
+2,"certified public accountat","certifi public accountat","certif","public",NA,NA,NA
 2,"corporate responsibility","corpor respons","corpor","respons",NA,NA,NA
 2,"crane operator","crane oper","crane","oper",NA,NA,NA
 2,"creative designer","creativ design","creativ","design",NA,NA,NA
@@ -1743,7 +1743,7 @@
 2,"dental hygienist","dental hygienist","dental","hygienist",NA,NA,NA
 2,"dental nurse","dental nurs","dental","nurs",NA,NA,NA
 2,"dental surgeon","dental surgeon","dental","surgeon",NA,NA,NA
-2,"dental technician","dental technician","dental","technician",NA,NA,NA
+2,"dental technician","dental technician","dental","tech",NA,NA,NA
 2,"commercial department","commerci depart","commerci","depart",NA,NA,NA
 2,"department manager","depart manag","depart","manag",NA,NA,NA
 2,"department supervisor","depart supervisor","depart","supervis",NA,NA,NA
@@ -1768,7 +1768,7 @@
 2,"graphic designer","graphic design","graphic","design",NA,NA,NA
 2,"desktop engineer","desktop engin","desktop","engin",NA,NA,NA
 2,"desktop support","desktop support","desktop","support",NA,NA,NA
-2,"desktop technician","desktop technician","desktop","technician",NA,NA,NA
+2,"desktop technician","desktop technician","desktop","tech",NA,NA,NA
 2,"development assistant","develop assist","develop","assist",NA,NA,NA
 2,"development associate","develop associ","develop","associ",NA,NA,NA
 2,"development consultant","develop consult","develop","consult",NA,NA,NA
@@ -1801,7 +1801,7 @@
 2,"general manager","general manag","general","manag",NA,NA,NA
 2,"regional director","region director","region","director",NA,NA,NA
 2,"regional director","region director","region","director",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"executive secretary","execut secretari","execut","secretari",NA,NA,NA
 2,"director and editor","director and editor","director","edit",NA,NA,NA
 2,"director and owner","director and owner","director","owner",NA,NA,NA
@@ -1836,9 +1836,9 @@
 2,"director of research","director of research","director","research",NA,NA,NA
 2,"director of sales","director of sale","director","sale",NA,NA,NA
 2,"director of security","director of secur","director","secur",NA,NA,NA
-2,"director of technology","director of technolog","director","technolog",NA,NA,NA
+2,"director of technology","director of technolog","director","tech",NA,NA,NA
 2,"director operations","director oper","director","oper",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"commercial director","commerci director","commerci","director",NA,NA,NA
 2,"assistant director","assist director","assist","director",NA,NA,NA
 2,"executive director","execut director","execut","director",NA,NA,NA
@@ -1846,12 +1846,12 @@
 2,"commercial director","commerci director","commerci","director",NA,NA,NA
 2,"art director","art director","art","director",NA,NA,NA
 2,"director general","director general","director","general",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"commercial director","commerci director","commerci","director",NA,NA,NA
 2,"general manager","general manag","general","manag",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
 2,"media manager","media manag","media","manag",NA,NA,NA
-2,"technical designer","technic design","technic","design",NA,NA,NA
+2,"technical designer","technic design","tech","design",NA,NA,NA
 2,"graphic designer","graphic design","graphic","design",NA,NA,NA
 2,"graphic designer","graphic design","graphic","design",NA,NA,NA
 2,"industrial designer","industri design","industr","design",NA,NA,NA
@@ -1917,12 +1917,12 @@
 2,"electrical foreman","electr foreman","electr","foreman",NA,NA,NA
 2,"electrical superintendent","electr superintend","electr","superintend",NA,NA,NA
 2,"electrical supervisor","electr supervisor","electr","supervis",NA,NA,NA
-2,"electrical technician","electr technician","electr","technician",NA,NA,NA
-2,"electrical technician","electr technician","electr","technician",NA,NA,NA
+2,"electrical technician","electr technician","electr","tech",NA,NA,NA
+2,"electrical technician","electr technician","electr","tech",NA,NA,NA
 2,"electronic engineer","electron engin","electron","engin",NA,NA,NA
-2,"electronic technician","electron technician","electron","technician",NA,NA,NA
+2,"electronic technician","electron technician","electron","tech",NA,NA,NA
 2,"electronic engineer","electron engin","electron","engin",NA,NA,NA
-2,"electronic technician","electron technician","electron","technician",NA,NA,NA
+2,"electronic technician","electron technician","electron","tech",NA,NA,NA
 2,"elementary teacher","elementari teach","elementar","teach",NA,NA,NA
 2,"maintenance electrician","mainten electrician","mainten","electrician",NA,NA,NA
 2,"emergency physician","emerg physician","emerg","physician",NA,NA,NA
@@ -1949,7 +1949,7 @@
 2,"engineering intern","engin intern","engin","intern",NA,NA,NA
 2,"engineering manager","engin manag","engin","manag",NA,NA,NA
 2,"engineering supervisor","engin supervisor","engin","supervis",NA,NA,NA
-2,"engineering technician","engin technician","engin","technician",NA,NA,NA
+2,"engineering technician","engin technician","engin","tech",NA,NA,NA
 2,"engineering trainee","engin traine","engin","traine",NA,NA,NA
 2,"english instructor","english instructor","english","instructor",NA,NA,NA
 2,"english teacher","english teach","english","teach",NA,NA,NA
@@ -1994,6 +1994,7 @@
 2,"executive housekeeper","execut housekeep","execut","housekeep",NA,NA,NA
 2,"executive manager","execut manag","execut","manag",NA,NA,NA
 2,"executive officer","execut offic","execut","offic",NA,NA,NA
+2,"executive assistant","execut assist","execut","assist",NA,NA,NA
 2,"executive producer","execut produc","execut","produc",NA,NA,NA
 2,"executive recruiter","execut recruit","execut","recruit",NA,NA,NA
 2,"executive sales","execut sale","execut","sale",NA,NA,NA
@@ -2035,7 +2036,7 @@
 2,"field specialist","field specialist","field","specialist",NA,NA,NA
 2,"field superintendent","field superintend","field","superintend",NA,NA,NA
 2,"field supervisor","field supervisor","field","supervis",NA,NA,NA
-2,"field technician","field technician","field","technician",NA,NA,NA
+2,"field technician","field technician","field","tech",NA,NA,NA
 2,"file clerk","file clerk","file","clerk",NA,NA,NA
 2,"branch manager","branch manag","branch","manag",NA,NA,NA
 2,"director film","director film","director","film",NA,NA,NA
@@ -2089,7 +2090,7 @@
 2,"food runner","food runner","food","runner",NA,NA,NA
 2,"food server","food server","food","server",NA,NA,NA
 2,"food service","food servic","food","servic",NA,NA,NA
-2,"food technologist","food technologist","food","technolog",NA,NA,NA
+2,"food technologist","food technologist","food","tech",NA,NA,NA
 2,"football coach","footbal coach","footbal","coach",NA,NA,NA
 2,"football player","footbal player","footbal","player",NA,NA,NA
 2,"forklift driver","forklift driver","forklift","driver",NA,NA,NA
@@ -2150,7 +2151,7 @@
 2,"general supervisor","general supervisor","general","supervis",NA,NA,NA
 2,"general surgeon","general surgeon","general","surgeon",NA,NA,NA
 2,"quantity surveyor","quantiti surveyor","quantit","surveyor",NA,NA,NA
-2,"geotechnical engineer","geotechn engin","geotechn","engin",NA,NA,NA
+2,"geotechnical engineer","geotechn engin","tech","engin",NA,NA,NA
 2,"administrative manager","administr manag","administr","manag",NA,NA,NA
 2,"administrative manager","administr manag","administr","manag",NA,NA,NA
 2,"commercial manager","commerci manag","commerci","manag",NA,NA,NA
@@ -2176,7 +2177,7 @@
 2,"industrial manager","industri manag","industr","manag",NA,NA,NA
 2,"operations manager","oper manag","oper","manag",NA,NA,NA
 2,"regional manager","region manag","region","manag",NA,NA,NA
-2,"technical manager","technic manag","technic","manag",NA,NA,NA
+2,"technical manager","technic manag","tech","manag",NA,NA,NA
 2,"german teacher","german teach","german","teach",NA,NA,NA
 2,"executive partner","execut partner","execut","partner",NA,NA,NA
 2,"executive director","execut director","execut","director",NA,NA,NA
@@ -2222,7 +2223,7 @@
 2,"helicopter pilot","helicopt pilot","helicopt","pilot",NA,NA,NA
 2,"helpdesk analyst","helpdesk analyst","helpdesk","analyst",NA,NA,NA
 2,"helpdesk specialist","helpdesk specialist","helpdesk","specialist",NA,NA,NA
-2,"helpdesk technician","helpdesk technician","helpdesk","technician",NA,NA,NA
+2,"helpdesk technician","helpdesk technician","helpdesk","tech",NA,NA,NA
 2,"helpdesk analyst","helpdesk analyst","helpdesk","analyst",NA,NA,NA
 2,"hgv driver","hgv driver","hgv","driver",NA,NA,NA
 2,"catering assistant","cater assist","cater","assist",NA,NA,NA
@@ -2252,7 +2253,7 @@
 2,"administrative employee","administr employe","administr","employe",NA,NA,NA
 2,"commercial employee","commerci employe","commerci","employe",NA,NA,NA
 2,"office clerk","offic clerk","offic","clerk",NA,NA,NA
-2,"technical employee","technic employe","technic","employe",NA,NA,NA
+2,"technical employee","technic employe","tech","employe",NA,NA,NA
 2,"implementation consultant","implement consult","implement","consult",NA,NA,NA
 2,"implementation manager","implement manag","implement","manag",NA,NA,NA
 2,"implementation specialist","implement specialist","implement","specialist",NA,NA,NA
@@ -2268,13 +2269,13 @@
 2,"industrial electrician","industri electrician","industr","electrician",NA,NA,NA
 2,"industrial engineer","industri engin","industr","engin",NA,NA,NA
 2,"industrial trainee","industri traine","industr","traine",NA,NA,NA
-2,"computer technology","comput technolog","comput","technolog",NA,NA,NA
+2,"computer technology","comput technolog","comput","tech",NA,NA,NA
 2,"computer scientist","comput scientist","comput","scientist",NA,NA,NA
 2,"information analyst","inform analyst","inform","analyst",NA,NA,NA
 2,"information manager","inform manag","inform","manag",NA,NA,NA
 2,"information officer","inform offic","inform","offic",NA,NA,NA
 2,"information specialist","inform specialist","inform","specialist",NA,NA,NA
-2,"information technology","inform technolog","inform","technolog",NA,NA,NA
+2,"information technology","inform technolog","inform","tech",NA,NA,NA
 2,"infrastructure analyst","infrastructur analyst","infrastructur","analyst",NA,NA,NA
 2,"infrastructure engineer","infrastructur engin","infrastructur","engin",NA,NA,NA
 2,"civil engineer","civil engin","civil","engin",NA,NA,NA
@@ -2299,14 +2300,14 @@
 2,"inspection engineer","inspect engin","inspect","engin",NA,NA,NA
 2,"quality inspector","qualiti inspector","qualiti","inspector",NA,NA,NA
 2,"installation manager","instal manag","instal","manag",NA,NA,NA
-2,"installation technician","instal technician","instal","technician",NA,NA,NA
+2,"installation technician","instal technician","instal","tech",NA,NA,NA
 2,"institutional sales","institut sale","institut","sale",NA,NA,NA
 2,"instructional assistant","instruct assist","instruct","assist",NA,NA,NA
 2,"instructional designer","instruct design","instruct","design",NA,NA,NA
 2,"instrument engineer","instrument engin","instrument","engin",NA,NA,NA
-2,"instrument technician","instrument technician","instrument","technician",NA,NA,NA
+2,"instrument technician","instrument technician","instrument","tech",NA,NA,NA
 2,"instrumentation engineer","instrument engin","instrument","engin",NA,NA,NA
-2,"instrumentation technician","instrument technician","instrument","technician",NA,NA,NA
+2,"instrumentation technician","instrument technician","instrument","tech",NA,NA,NA
 2,"insurance advisor","insur advis","insur","advis",NA,NA,NA
 2,"insurance agent","insur agent","insur","agent",NA,NA,NA
 2,"insurance broker","insur broker","insur","broker",NA,NA,NA
@@ -2353,7 +2354,7 @@
 2,"it support analyst","it support analyst","support","analyst",NA,NA,NA
 2,"it support engineer","it support engin","support","engin",NA,NA,NA
 2,"it support specialist","it support specialist","support","specialist",NA,NA,NA
-2,"it support technician","it support technician","support","technician",NA,NA,NA
+2,"it support technician","it support technician","support","tech",NA,NA,NA
 2,"it system administrator","it system administr","system","administr",NA,NA,NA
 2,"it systems engineer","it system engin","system","engin",NA,NA,NA
 2,"java developer","java develop","java","develop",NA,NA,NA
@@ -2408,11 +2409,11 @@
 2,"lab assistant","lab assist","lab","assist",NA,NA,NA
 2,"lab manager","lab manag","lab","manag",NA,NA,NA
 2,"lab tech","lab tech","lab","tech",NA,NA,NA
-2,"lab technician","lab technician","lab","technician",NA,NA,NA
+2,"lab technician","lab technician","lab","tech",NA,NA,NA
 2,"laboratory analyst","laboratori analyst","laborator","analyst",NA,NA,NA
 2,"laboratory assistant","laboratori assist","laborator","assist",NA,NA,NA
 2,"laboratory manager","laboratori manag","laborator","manag",NA,NA,NA
-2,"laboratory technician","laboratori technician","laborator","technician",NA,NA,NA
+2,"laboratory technician","laboratori technician","laborator","tech",NA,NA,NA
 2,"land surveyor","land surveyor","land","surveyor",NA,NA,NA
 2,"landscape architect","landscap architect","landscap","architect",NA,NA,NA
 2,"landscape designer","landscap design","landscap","design",NA,NA,NA
@@ -2434,7 +2435,7 @@
 2,"lead programmer","lead programm","lead","programm",NA,NA,NA
 2,"lead recruiter","lead recruit","lead","recruit",NA,NA,NA
 2,"lead teacher","lead teach","lead","teach",NA,NA,NA
-2,"lead technician","lead technician","lead","technician",NA,NA,NA
+2,"lead technician","lead technician","lead","tech",NA,NA,NA
 2,"lead teller","lead teller","lead","teller",NA,NA,NA
 2,"learning specialist","learn specialist","learn","specialist",NA,NA,NA
 2,"leasing agent","leas agent","leas","agent",NA,NA,NA
@@ -2466,7 +2467,7 @@
 2,"project leader","project lead","project","lead",NA,NA,NA
 2,"life coach","life coach","life","coach",NA,NA,NA
 2,"lighting designer","light design","light","design",NA,NA,NA
-2,"lighting technician","light technician","light","technician",NA,NA,NA
+2,"lighting technician","light technician","light","tech",NA,NA,NA
 2,"line cook","line cook","line","cook",NA,NA,NA
 2,"line manager","line manag","line","manag",NA,NA,NA
 2,"line producer","line produc","line","produc",NA,NA,NA
@@ -2506,7 +2507,7 @@
 2,"maintenance planner","mainten planner","mainten","planner",NA,NA,NA
 2,"maintenance supervisor","mainten supervisor","mainten","supervis",NA,NA,NA
 2,"maintenance tech","mainten tech","mainten","tech",NA,NA,NA
-2,"maintenance technician","mainten technician","mainten","technician",NA,NA,NA
+2,"maintenance technician","mainten technician","mainten","tech",NA,NA,NA
 2,"maintenance worker","mainten work","mainten","work",NA,NA,NA
 2,"makeup artist","makeup artist","makeup","artist",NA,NA,NA
 2,"makeup artist","makeup artist","makeup","artist",NA,NA,NA
@@ -2543,7 +2544,7 @@
 2,"manufacturing engineer","manufactur engin","manufactur","engin",NA,NA,NA
 2,"manufacturing manager","manufactur manag","manufactur","manag",NA,NA,NA
 2,"manufacturing supervisor","manufactur supervisor","manufactur","supervis",NA,NA,NA
-2,"manufacturing technician","manufactur technician","manufactur","technician",NA,NA,NA
+2,"manufacturing technician","manufactur technician","manufactur","tech",NA,NA,NA
 2,"makeup artist","makeup artist","makeup","artist",NA,NA,NA
 2,"marine engineer","marin engin","marin","engin",NA,NA,NA
 2,"market analyst","market analyst","market","analyst",NA,NA,NA
@@ -2589,7 +2590,7 @@
 2,"mechanical engineer","mechan engin","mechan","engin",NA,NA,NA
 2,"mechanical fitter","mechan fitter","mechan","fitter",NA,NA,NA
 2,"mechanical supervisor","mechan supervisor","mechan","supervis",NA,NA,NA
-2,"mechanical technician","mechan technician","mechan","technician",NA,NA,NA
+2,"mechanical technician","mechan technician","mechan","tech",NA,NA,NA
 2,"occupational physician","occup physician","occup","physician",NA,NA,NA
 2,"employee service","employe servic","employe","servic",NA,NA,NA
 2,"medical assistant","medic assist","medic","assist",NA,NA,NA
@@ -2613,8 +2614,8 @@
 2,"medical scribe","medic scribe","medic","scrib",NA,NA,NA
 2,"medical secretary","medic secretari","medic","secretari",NA,NA,NA
 2,"medical student","medic student","medic","student",NA,NA,NA
-2,"medical technician","medic technician","medic","technician",NA,NA,NA
-2,"medical technologist","medic technologist","medic","technolog",NA,NA,NA
+2,"medical technician","medic technician","medic","tech",NA,NA,NA
+2,"medical technologist","medic technologist","medic","tech",NA,NA,NA
 2,"medical transcriptionist","medic transcriptionist","medic","transcriptionist",NA,NA,NA
 2,"veterinary surgeon","veterinari surgeon","veterinari","surgeon",NA,NA,NA
 2,"member of the board","member of the board","member","board",NA,NA,NA
@@ -2642,15 +2643,15 @@
 2,"music editor","music editor","music","edit",NA,NA,NA
 2,"music producer","music produc","music","produc",NA,NA,NA
 2,"music teacher","music teach","music","teach",NA,NA,NA
-2,"nail technician","nail technician","nail","technician",NA,NA,NA
-2,"ndt technician","ndt technician","ndt","technician",NA,NA,NA
+2,"nail technician","nail technician","nail","tech",NA,NA,NA
+2,"ndt technician","ndt technician","ndt","tech",NA,NA,NA
 2,"network administrator","network administr","network","administr",NA,NA,NA
 2,"network analyst","network analyst","network","analyst",NA,NA,NA
 2,"network consultant","network consult","network","consult",NA,NA,NA
 2,"network engineer","network engin","network","engin",NA,NA,NA
 2,"network manager","network manag","network","manag",NA,NA,NA
 2,"network specialist","network specialist","network","specialist",NA,NA,NA
-2,"network technician","network technician","network","technician",NA,NA,NA
+2,"network technician","network technician","network","tech",NA,NA,NA
 2,"news director","news director","news","director",NA,NA,NA
 2,"news editor","news editor","news","edit",NA,NA,NA
 2,"news reporter","news report","news","report",NA,NA,NA
@@ -2702,8 +2703,8 @@
 2,"operations officer","oper offic","oper","offic",NA,NA,NA
 2,"operations specialist","oper specialist","oper","specialist",NA,NA,NA
 2,"operations supervisor","oper supervisor","oper","supervis",NA,NA,NA
-2,"ophthalmic technician","ophthalm technician","ophthalm","technician",NA,NA,NA
-2,"optometric technician","optometr technician","optometr","technician",NA,NA,NA
+2,"ophthalmic technician","ophthalm technician","ophthalm","tech",NA,NA,NA
+2,"optometric technician","optometr technician","optometr","tech",NA,NA,NA
 2,"oracle consultant","oracl consult","oracl","consult",NA,NA,NA
 2,"oracle developer","oracl develop","oracl","develop",NA,NA,NA
 2,"order picker","order picker","order","picker",NA,NA,NA
@@ -2746,7 +2747,7 @@
 2,"payroll officer","payrol offic","payrol","offic",NA,NA,NA
 2,"payroll specialist","payrol specialist","payrol","specialist",NA,NA,NA
 2,"payroll supervisor","payrol supervisor","payrol","supervis",NA,NA,NA
-2,"pc technician","pc technician","pc","technician",NA,NA,NA
+2,"pc technician","pc technician","pc","tech",NA,NA,NA
 2,"product development","product develop","product","develop",NA,NA,NA
 2,"physical education","physic educ","physic","educ",NA,NA,NA
 2,"pedagogical employee","pedagog employe","pedagog","employe",NA,NA,NA
@@ -2754,12 +2755,8 @@
 2,"peer mentor","peer mentor","peer","mentor",NA,NA,NA
 2,"peer tutor","peer tutor","peer","tutor",NA,NA,NA
 2,"senior citizen","senior citizen","senior","citizen",NA,NA,NA
-2,"personal assistant","person assist","person","assist",NA,NA,NA
-2,"personal banker","person banker","person","banker",NA,NA,NA
-2,"personal trainer","person trainer","person","trainer",NA,NA,NA
-2,"personnel manager","personnel manag","person","manag",NA,NA,NA
-2,"personnel officer","personnel offic","person","offic",NA,NA,NA
-2,"personal coach","person coach","person","coach",NA,NA,NA
+2,"care assistant","care assist","care","assist",NA,NA,NA
+2,"care attendant","care attend","care","attend",NA,NA,NA
 2,"petroleum engineer","petroleum engin","petroleum","engin",NA,NA,NA
 2,"petroleum farmer","petroleum farmer","petroleum","farmer",NA,NA,NA
 2,"phd student","phd student","phd","student",NA,NA,NA
@@ -2768,7 +2765,7 @@
 2,"pharmacy intern","pharmaci intern","pharmac","intern",NA,NA,NA
 2,"pharmacy manager","pharmaci manag","pharmac","manag",NA,NA,NA
 2,"pharmacy tech","pharmaci tech","pharmac","tech",NA,NA,NA
-2,"pharmacy technician","pharmaci technician","pharmac","technician",NA,NA,NA
+2,"pharmacy technician","pharmaci technician","pharmac","tech",NA,NA,NA
 2,"phd candidate","phd candid","phd","candid",NA,NA,NA
 2,"phd researcher","phd research","phd","research",NA,NA,NA
 2,"phd student","phd student","phd","student",NA,NA,NA
@@ -2807,8 +2804,6 @@
 2,"postdoctoral fellow","postdoctor fellow","postdoctor","fellow",NA,NA,NA
 2,"postdoctoral researcher","postdoctor research","postdoctor","research",NA,NA,NA
 2,"public relations","public relat","public","relat",NA,NA,NA
-2,"pr intern","pr intern","pr","intern",NA,NA,NA
-2,"pr manager","pr manag","pr","manag",NA,NA,NA
 2,"professional practice","profession practic","profession","practic",NA,NA,NA
 2,"professional practice","profession practic","profession","practic",NA,NA,NA
 2,"practice administrator","practic administr","practic","administr",NA,NA,NA
@@ -2847,7 +2842,7 @@
 2,"process manager","process manag","process","manag",NA,NA,NA
 2,"process operator","process oper","process","oper",NA,NA,NA
 2,"process specialist","process specialist","process","specialist",NA,NA,NA
-2,"process technician","process technician","process","technician",NA,NA,NA
+2,"process technician","process technician","process","tech",NA,NA,NA
 2,"procurement analyst","procur analyst","procur","analyst",NA,NA,NA
 2,"procurement coordinator","procur coordin","procur","coordin",NA,NA,NA
 2,"procurement manager","procur manag","procur","manag",NA,NA,NA
@@ -2886,7 +2881,7 @@
 2,"production runner","product runner","product","runner",NA,NA,NA
 2,"production specialist","product specialist","product","specialist",NA,NA,NA
 2,"production supervisor","product supervisor","product","supervis",NA,NA,NA
-2,"production technician","product technician","product","technician",NA,NA,NA
+2,"production technician","product technician","product","tech",NA,NA,NA
 2,"production worker","product work","product","work",NA,NA,NA
 2,"professor of english","professor of english","professor","english",NA,NA,NA
 2,"college professor","colleg professor","colleg","professor",NA,NA,NA
@@ -2996,15 +2991,15 @@
 2,"quality manager","qualiti manag","qualiti","manag",NA,NA,NA
 2,"quality specialist","qualiti specialist","qualiti","specialist",NA,NA,NA
 2,"quality supervisor","qualiti supervisor","qualiti","supervis",NA,NA,NA
-2,"quality technician","qualiti technician","qualiti","technician",NA,NA,NA
+2,"quality technician","qualiti technician","qualiti","tech",NA,NA,NA
 2,"quantitative analyst","quantit analyst","quantit","analyst",NA,NA,NA
 2,"quantity surveyor","quantiti surveyor","quantit","surveyor",NA,NA,NA
 2,"research and development","research and develop","research","develop",NA,NA,NA
 2,"licensed nurse","licens nurs","licens","nurs",NA,NA,NA
 2,"radio host","radio host","radio","host",NA,NA,NA
 2,"radio personality","radio person","radio","person",NA,NA,NA
-2,"radiologic technologist","radiolog technologist","radiolog","technolog",NA,NA,NA
-2,"radiology technologist","radiolog technologist","radiolog","technolog",NA,NA,NA
+2,"radiologic technologist","radiolog technologist","radiolog","tech",NA,NA,NA
+2,"radiology technologist","radiolog technologist","radiolog","tech",NA,NA,NA
 2,"ramp agent","ramp agent","ramp","agent",NA,NA,NA
 2,"real estate","real estat","real","estat",NA,NA,NA
 2,"realtor associate","realtor associ","realtor","associ",NA,NA,NA
@@ -3038,7 +3033,7 @@
 2,"relationship officer","relationship offic","relationship","offic",NA,NA,NA
 2,"release manager","releas manag","releas","manag",NA,NA,NA
 2,"reliability engineer","reliabl engin","reliabl","engin",NA,NA,NA
-2,"repair technician","repair technician","repair","technician",NA,NA,NA
+2,"repair technician","repair technician","repair","tech",NA,NA,NA
 2,"delivery man","deliveri man","deliveri","man",NA,NA,NA
 2,"news reporter","news report","news","report",NA,NA,NA
 2,"trade representative","trade repres","trade","repres",NA,NA,NA
@@ -3064,7 +3059,7 @@
 2,"research scientist","research scientist","research","scientist",NA,NA,NA
 2,"research specialist","research specialist","research","specialist",NA,NA,NA
 2,"research student","research student","research","student",NA,NA,NA
-2,"research technician","research technician","research","technician",NA,NA,NA
+2,"research technician","research technician","research","tech",NA,NA,NA
 2,"reservations agent","reserv agent","reserv","agent",NA,NA,NA
 2,"reservations manager","reserv manag","reserv","manag",NA,NA,NA
 2,"reservoir engineer","reservoir engin","reservoir","engin",NA,NA,NA
@@ -3092,7 +3087,7 @@
 2,"logistics manager","logist manag","logist","manag",NA,NA,NA
 2,"marketing manager","market manag","market","manag",NA,NA,NA
 2,"quality manager","qualiti manag","qualiti","manag",NA,NA,NA
-2,"technical manager","technic manag","technic","manag",NA,NA,NA
+2,"technical manager","technic manag","tech","manag",NA,NA,NA
 2,"restaurant manager","restaur manag","restaur","manag",NA,NA,NA
 2,"restaurant supervisor","restaur supervisor","restaur","supervis",NA,NA,NA
 2,"retail assistant","retail assist","retail","assist",NA,NA,NA
@@ -3235,7 +3230,7 @@
 2,"senior stylist","senior stylist","senior","stylist",NA,NA,NA
 2,"senior supervisor","senior supervisor","senior","supervis",NA,NA,NA
 2,"senior surveyor","senior surveyor","senior","surveyor",NA,NA,NA
-2,"senior technician","senior technician","senior","technician",NA,NA,NA
+2,"senior technician","senior technician","senior","tech",NA,NA,NA
 2,"senior underwriter","senior underwrit","senior","underwrit",NA,NA,NA
 2,"senior writer","senior write","senior","write",NA,NA,NA
 2,"search engine optimization executive","search engin optim execut","engin","execut",NA,NA,NA
@@ -3253,9 +3248,9 @@
 2,"service specialist","servic specialist","servic","specialist",NA,NA,NA
 2,"service supervisor","servic supervisor","servic","supervis",NA,NA,NA
 2,"service tech","servic tech","servic","tech",NA,NA,NA
-2,"service technician","servic technician","servic","technician",NA,NA,NA
+2,"service technician","servic technician","servic","tech",NA,NA,NA
 2,"service employee","servic employe","servic","employe",NA,NA,NA
-2,"service technician","servic technician","servic","technician",NA,NA,NA
+2,"service technician","servic technician","servic","tech",NA,NA,NA
 2,"customer service","custom servic","custom","servic",NA,NA,NA
 2,"customer service","custom servic","custom","servic",NA,NA,NA
 2,"sharepoint developer","sharepoint develop","sharepoint","develop",NA,NA,NA
@@ -3309,8 +3304,8 @@
 2,"solutions consultant","solut consult","solut","consult",NA,NA,NA
 2,"solutions engineer","solut engin","solut","engin",NA,NA,NA
 2,"solutions specialist","solut specialist","solut","specialist",NA,NA,NA
-2,"technical support","technic support","technic","support",NA,NA,NA
-2,"technical support","technic support","technic","support",NA,NA,NA
+2,"technical support","technic support","tech","support",NA,NA,NA
+2,"technical support","technic support","tech","support",NA,NA,NA
 2,"sound designer","sound design","sound","design",NA,NA,NA
 2,"sound engineer","sound engin","sound","engin",NA,NA,NA
 2,"sourcing manager","sourc manag","sourc","manag",NA,NA,NA
@@ -3431,8 +3426,8 @@
 2,"production supervisor","product supervisor","product","supervis",NA,NA,NA
 2,"sales manager","sale manag","sale","manag",NA,NA,NA
 2,"sales manager","sale manag","sale","manag",NA,NA,NA
-2,"technical supervisor","technic supervisor","technic","supervis",NA,NA,NA
-2,"technical support","technic support","technic","support",NA,NA,NA
+2,"technical supervisor","technic supervisor","tech","supervis",NA,NA,NA
+2,"technical support","technic support","tech","support",NA,NA,NA
 2,"supply chain","suppli chain","suppl","chain",NA,NA,NA
 2,"supply teacher","suppli teach","suppl","teach",NA,NA,NA
 2,"support analyst","support analyst","support","analyst",NA,NA,NA
@@ -3441,10 +3436,10 @@
 2,"support manager","support manag","support","manag",NA,NA,NA
 2,"support specialist","support specialist","support","specialist",NA,NA,NA
 2,"support staff","support staff","support","staff",NA,NA,NA
-2,"support technician","support technician","support","technician",NA,NA,NA
+2,"support technician","support technician","support","tech",NA,NA,NA
 2,"support worker","support work","support","work",NA,NA,NA
-2,"surgical technologist","surgic technologist","surgic","technolog",NA,NA,NA
-2,"survey technician","survey technician","survey","technician",NA,NA,NA
+2,"surgical technologist","surgic technologist","surgic","tech",NA,NA,NA
+2,"survey technician","survey technician","survey","tech",NA,NA,NA
 2,"software engineer","softwar engin","softwar","engin",NA,NA,NA
 2,"swim coach","swim coach","swim","coach",NA,NA,NA
 2,"swim instructor","swim instructor","swim","instructor",NA,NA,NA
@@ -3502,59 +3497,59 @@
 2,"team leader","team lead","team","lead",NA,NA,NA
 2,"tech lead","tech lead","tech","lead",NA,NA,NA
 2,"tech support","tech support","tech","support",NA,NA,NA
-2,"technical advisor","technic advis","technic","advis",NA,NA,NA
-2,"technical analyst","technic analyst","technic","analyst",NA,NA,NA
-2,"technical architect","technic architect","technic","architect",NA,NA,NA
-2,"technical assistant","technic assist","technic","assist",NA,NA,NA
-2,"technical associate","technic associ","technic","associ",NA,NA,NA
-2,"technical consultant","technic consult","technic","consult",NA,NA,NA
-2,"technical coordinator","technic coordin","technic","coordin",NA,NA,NA
-2,"technical designer","technic design","technic","design",NA,NA,NA
-2,"technical director","technic director","technic","director",NA,NA,NA
-2,"technical engineer","technic engin","technic","engin",NA,NA,NA
-2,"technical executive","technic execut","technic","execut",NA,NA,NA
-2,"technical expert","technic expert","technic","expert",NA,NA,NA
-2,"technical intern","technic intern","technic","intern",NA,NA,NA
-2,"technical lead","technic lead","technic","lead",NA,NA,NA
-2,"technical lead","technic lead","technic","lead",NA,NA,NA
-2,"technical manager","technic manag","technic","manag",NA,NA,NA
-2,"technical officer","technic offic","technic","offic",NA,NA,NA
-2,"technical recruiter","technic recruit","technic","recruit",NA,NA,NA
-2,"technical representative","technic repres","technic","repres",NA,NA,NA
-2,"technical sales","technic sale","technic","sale",NA,NA,NA
-2,"technical services","technic servic","technic","servic",NA,NA,NA
-2,"technical specialist","technic specialist","technic","specialist",NA,NA,NA
-2,"technical supervisor","technic supervisor","technic","supervis",NA,NA,NA
-2,"technical support","technic support","technic","support",NA,NA,NA
-2,"technical trainer","technic trainer","technic","trainer",NA,NA,NA
-2,"technical writer","technic write","technic","write",NA,NA,NA
-2,"maintenance technician","mainten technician","mainten","technician",NA,NA,NA
-2,"laboratory technician","laboratori technician","laborator","technician",NA,NA,NA
-2,"commercial technician","commerci technician","commerci","technician",NA,NA,NA
-2,"technology analyst","technolog analyst","technolog","analyst",NA,NA,NA
-2,"technology consultant","technolog consult","technolog","consult",NA,NA,NA
-2,"technology lead","technolog lead","technolog","lead",NA,NA,NA
-2,"technology manager","technolog manag","technolog","manag",NA,NA,NA
-2,"technology specialist","technolog specialist","technolog","specialist",NA,NA,NA
-2,"administrative technician","administr technician","administr","technician",NA,NA,NA
-2,"commercial technician","commerci technician","commerci","technician",NA,NA,NA
-2,"commercial technician","commerci technician","commerci","technician",NA,NA,NA
-2,"commercial technician","commerci technician","commerci","technician",NA,NA,NA
-2,"nursing technician","nurs technician","nurs","technician",NA,NA,NA
-2,"computer technician","comput technician","comput","technician",NA,NA,NA
-2,"electric technician","electr technician","electr","technician",NA,NA,NA
-2,"electronic technician","electron technician","electron","technician",NA,NA,NA
-2,"building technician","build technician","build","technician",NA,NA,NA
-2,"electronic technician","electron technician","electron","technician",NA,NA,NA
-2,"computer technician","comput technician","comput","technician",NA,NA,NA
-2,"computer technician","comput technician","comput","technician",NA,NA,NA
-2,"computer technician","comput technician","comput","technician",NA,NA,NA
-2,"mechanical technician","mechan technician","mechan","technician",NA,NA,NA
-2,"mechanical technician","mechan technician","mechan","technician",NA,NA,NA
+2,"technical advisor","technic advis","tech","advis",NA,NA,NA
+2,"technical analyst","technic analyst","tech","analyst",NA,NA,NA
+2,"technical architect","technic architect","tech","architect",NA,NA,NA
+2,"technical assistant","technic assist","tech","assist",NA,NA,NA
+2,"technical associate","technic associ","tech","associ",NA,NA,NA
+2,"technical consultant","technic consult","tech","consult",NA,NA,NA
+2,"technical coordinator","technic coordin","tech","coordin",NA,NA,NA
+2,"technical designer","technic design","tech","design",NA,NA,NA
+2,"technical director","technic director","tech","director",NA,NA,NA
+2,"technical engineer","technic engin","tech","engin",NA,NA,NA
+2,"technical executive","technic execut","tech","execut",NA,NA,NA
+2,"technical expert","technic expert","tech","expert",NA,NA,NA
+2,"technical intern","technic intern","tech","intern",NA,NA,NA
+2,"technical lead","technic lead","tech","lead",NA,NA,NA
+2,"technical lead","technic lead","tech","lead",NA,NA,NA
+2,"technical manager","technic manag","tech","manag",NA,NA,NA
+2,"technical officer","technic offic","tech","offic",NA,NA,NA
+2,"technical recruiter","technic recruit","tech","recruit",NA,NA,NA
+2,"technical representative","technic repres","tech","repres",NA,NA,NA
+2,"technical sales","technic sale","tech","sale",NA,NA,NA
+2,"technical services","technic servic","tech","servic",NA,NA,NA
+2,"technical specialist","technic specialist","tech","specialist",NA,NA,NA
+2,"technical supervisor","technic supervisor","tech","supervis",NA,NA,NA
+2,"technical support","technic support","tech","support",NA,NA,NA
+2,"technical trainer","technic trainer","tech","trainer",NA,NA,NA
+2,"technical writer","technic write","tech","write",NA,NA,NA
+2,"maintenance technician","mainten technician","mainten","tech",NA,NA,NA
+2,"laboratory technician","laboratori technician","laborator","tech",NA,NA,NA
+2,"commercial technician","commerci technician","commerci","tech",NA,NA,NA
+2,"technology analyst","technolog analyst","tech","analyst",NA,NA,NA
+2,"technology consultant","technolog consult","tech","consult",NA,NA,NA
+2,"technology lead","technolog lead","tech","lead",NA,NA,NA
+2,"technology manager","technolog manag","tech","manag",NA,NA,NA
+2,"technology specialist","technolog specialist","tech","specialist",NA,NA,NA
+2,"administrative technician","administr technician","administr","tech",NA,NA,NA
+2,"commercial technician","commerci technician","commerci","tech",NA,NA,NA
+2,"commercial technician","commerci technician","commerci","tech",NA,NA,NA
+2,"commercial technician","commerci technician","commerci","tech",NA,NA,NA
+2,"nursing technician","nurs technician","nurs","tech",NA,NA,NA
+2,"computer technician","comput technician","comput","tech",NA,NA,NA
+2,"electric technician","electr technician","electr","tech",NA,NA,NA
+2,"electronic technician","electron technician","electron","tech",NA,NA,NA
+2,"building technician","build technician","build","tech",NA,NA,NA
+2,"electronic technician","electron technician","electron","tech",NA,NA,NA
+2,"computer technician","comput technician","comput","tech",NA,NA,NA
+2,"computer technician","comput technician","comput","tech",NA,NA,NA
+2,"computer technician","comput technician","comput","tech",NA,NA,NA
+2,"mechanical technician","mechan technician","mechan","tech",NA,NA,NA
+2,"mechanical technician","mechan technician","mechan","tech",NA,NA,NA
 2,"telecom engineer","telecom engin","telecom","engin",NA,NA,NA
 2,"telecommunications engineer","telecommun engin","telecommun","engin",NA,NA,NA
 2,"telecommunications specialist","telecommun specialist","telecommun","specialist",NA,NA,NA
-2,"telecommunications technician","telecommun technician","telecommun","technician",NA,NA,NA
+2,"telecommunications technician","telecommun technician","telecommun","tech",NA,NA,NA
 2,"telecommunications opera dora","telecommun opera dora","telecommun","opera",NA,NA,NA
 2,"telecommunications opera dora","telecommun opera dora","telecommun","opera",NA,NA,NA
 2,"telephone operator","telephon oper","telephon","oper",NA,NA,NA
@@ -3569,7 +3564,7 @@
 2,"test engineer","test engin","test","engin",NA,NA,NA
 2,"test lead","test lead","test","lead",NA,NA,NA
 2,"test manager","test manag","test","manag",NA,NA,NA
-2,"test technician","test technician","test","technician",NA,NA,NA
+2,"test technician","test technician","test","tech",NA,NA,NA
 2,"testing engineer","test engin","test","engin",NA,NA,NA
 2,"textile designer","textil design","textil","design",NA,NA,NA
 2,"single owner","singl owner","singl","owner",NA,NA,NA
@@ -3625,7 +3620,7 @@
 2,"validation engineer","valid engin","valid","engin",NA,NA,NA
 2,"various positions","various posit","various","posit",NA,NA,NA
 2,"external salesman","extern salesman","extern","sale",NA,NA,NA
-2,"technical sales","technic sale","technic","sale",NA,NA,NA
+2,"technical sales","technic sale","tech","sale",NA,NA,NA
 2,"sales manager","sale manag","sale","manag",NA,NA,NA
 2,"sales advisor","sale advis","sale","advis",NA,NA,NA
 2,"sales employee","sale employe","sale","employe",NA,NA,NA
@@ -3633,7 +3628,7 @@
 2,"site manager","site manag","site","manag",NA,NA,NA
 2,"veterinary assistant","veterinari assist","veterinari","assist",NA,NA,NA
 2,"veterinary surgeon","veterinari surgeon","veterinari","surgeon",NA,NA,NA
-2,"veterinary technician","veterinari technician","veterinari","technician",NA,NA,NA
+2,"veterinary technician","veterinari technician","veterinari","tech",NA,NA,NA
 2,"vice president","vice presid","vice","presid",NA,NA,NA
 2,"vice chairman","vice chairman","vice","chairman",NA,NA,NA
 2,"vice president","vice presid","vice","presid",NA,NA,NA
@@ -3737,8 +3732,8 @@
 1,"owner","owner","owner",NA,NA,NA,NA
 1,"micro-business","microbusi","microbusi",NA,NA,NA,NA
 1,"director","director","director",NA,NA,NA,NA
-1,"technician","technician","technician",NA,NA,NA,NA
-1,"technician","technician","technician",NA,NA,NA,NA
+1,"technician","technician","tech",NA,NA,NA,NA
+1,"technician","technician","tech",NA,NA,NA,NA
 1,"nurse","nurs","nurs",NA,NA,NA,NA
 1,"operator","oper","oper",NA,NA,NA,NA
 1,"teacher","teach","teach",NA,NA,NA,NA
@@ -3895,6 +3890,7 @@
 1,"assistant","assist","assist",NA,NA,NA,NA
 1,"assistant","assist","assist",NA,NA,NA,NA
 1,"assistant","assist","assist",NA,NA,NA,NA
+1,"assistant","assist","assist",NA,NA,NA,NA
 1,"associate","associ","associ",NA,NA,NA,NA
 1,"associate","associ","associ",NA,NA,NA,NA
 1,"clerk","clerk","clerk",NA,NA,NA,NA
@@ -3915,11 +3911,12 @@
 1,"apprentice","apprentic","apprentic",NA,NA,NA,NA
 1,"author","author","author",NA,NA,NA,NA
 1,"author","author","author",NA,NA,NA,NA
-1,"auto technician","auto technician","technician",NA,NA,NA,NA
+1,"auto technician","auto technician","tech",NA,NA,NA,NA
 1,"independent","independ","independ",NA,NA,NA,NA
 1,"autonomous","autonom","autonom",NA,NA,NA,NA
 1,"autonomous","autonom","autonom",NA,NA,NA,NA
 1,"autonomous","autonom","autonom",NA,NA,NA,NA
+1,"assistant","assist","assist",NA,NA,NA,NA
 1,"assistant","assist","assist",NA,NA,NA,NA
 1,"assistant","assist","assist",NA,NA,NA,NA
 1,"advocate","advoc","advoc",NA,NA,NA,NA
@@ -4111,12 +4108,10 @@
 1,"counselor","counselor","advis",NA,NA,NA,NA
 1,"courier","courier","courier",NA,NA,NA,NA
 1,"cook","cook","cook",NA,NA,NA,NA
-1,"cpa","cpa","cpa",NA,NA,NA,NA
 1,"creative","creativ","creativ",NA,NA,NA,NA
 1,"creator","creator","creator",NA,NA,NA,NA
 1,"crew","crew","crew",NA,NA,NA,NA
 1,"croupier","croupier","croupier",NA,NA,NA,NA
-1,"css","css","css",NA,NA,NA,NA
 1,"cook","cook","cook",NA,NA,NA,NA
 1,"cook","cook","cook",NA,NA,NA,NA
 1,"curator","curat","curat",NA,NA,NA,NA
@@ -4133,7 +4128,6 @@
 1,"demonstrator","demonstr","demonstr",NA,NA,NA,NA
 1,"dentist","dentist","dentist",NA,NA,NA,NA
 1,"dentist","dentist","dentist",NA,NA,NA,NA
-1,"deo","deo","deo",NA,NA,NA,NA
 1,"department head","depart head","depart",NA,NA,NA,NA
 1,"salesman","salesman","sale",NA,NA,NA,NA
 1,"salesman","salesman","sale",NA,NA,NA,NA
@@ -4348,7 +4342,7 @@
 1,"gf","gf","gf",NA,NA,NA,NA
 1,"journalist","journalist","journalist",NA,NA,NA,NA
 1,"gis intern","gis intern","intern",NA,NA,NA,NA
-1,"gis technician","gis technician","technician",NA,NA,NA,NA
+1,"gis technician","gis technician","tech",NA,NA,NA,NA
 1,"graduate","graduat","graduat",NA,NA,NA,NA
 1,"graphic","graphic","graphic",NA,NA,NA,NA
 1,"groundskeeper","groundskeep","groundskeep",NA,NA,NA,NA
@@ -4399,7 +4393,7 @@
 1,"it coordinator","it coordin","coordin",NA,NA,NA,NA
 1,"hvac engineer","hvac engin","engin",NA,NA,NA,NA
 1,"hvac tech","hvac tech","tech",NA,NA,NA,NA
-1,"hvac technician","hvac technician","technician",NA,NA,NA,NA
+1,"hvac technician","hvac technician","tech",NA,NA,NA,NA
 1,"hardware","hardwar","hardwar",NA,NA,NA,NA
 1,"hydrogeologist","hydrogeologist","hydrogeologist",NA,NA,NA,NA
 1,"it manager","it manag","manag",NA,NA,NA,NA
@@ -4474,7 +4468,7 @@
 1,"it supervisor","it supervisor","supervis",NA,NA,NA,NA
 1,"it support","it support","support",NA,NA,NA,NA
 1,"it support","it support","support",NA,NA,NA,NA
-1,"it technician","it technician","technician",NA,NA,NA,NA
+1,"it technician","it technician","tech",NA,NA,NA,NA
 1,"janitor","janitor","janitor",NA,NA,NA,NA
 1,"java","java","java",NA,NA,NA,NA
 1,"jednatel","jednatel","jednatel",NA,NA,NA,NA
@@ -4690,6 +4684,12 @@
 1,"pawn","pawn","pawn",NA,NA,NA,NA
 1,"performer","perform","perform",NA,NA,NA,NA
 1,"journalist","journalist","journalist",NA,NA,NA,NA
+1,"assistant","assist","assist",NA,NA,NA,NA
+1,"banker","banker","banker",NA,NA,NA,NA
+1,"trainer","trainer","trainer",NA,NA,NA,NA
+1,"manager","manag","manag",NA,NA,NA,NA
+1,"officer","offic","offic",NA,NA,NA,NA
+1,"trainer","trainer","trainer",NA,NA,NA,NA
 1,"researcher","research","research",NA,NA,NA,NA
 1,"postgraduate","postgradu","postgradu",NA,NA,NA,NA
 1,"pharmacist","pharmacist","pharmacist",NA,NA,NA,NA
@@ -4969,13 +4969,13 @@
 1,"teacher","teach","teach",NA,NA,NA,NA
 1,"teaching","teach","teach",NA,NA,NA,NA
 1,"tech","tech","tech",NA,NA,NA,NA
-1,"technical","technic","technic",NA,NA,NA,NA
-1,"technician","technician","technician",NA,NA,NA,NA
-1,"technician","technician","technician",NA,NA,NA,NA
-1,"it technician","it technician","technician",NA,NA,NA,NA
-1,"technical","technic","technic",NA,NA,NA,NA
-1,"technical","technic","technic",NA,NA,NA,NA
-1,"techniques","techniqu","techniqu",NA,NA,NA,NA
+1,"technical","technic","tech",NA,NA,NA,NA
+1,"technician","technician","tech",NA,NA,NA,NA
+1,"technician","technician","tech",NA,NA,NA,NA
+1,"it technician","it technician","tech",NA,NA,NA,NA
+1,"technical","technic","tech",NA,NA,NA,NA
+1,"technical","technic","tech",NA,NA,NA,NA
+1,"techniques","techniqu","tech",NA,NA,NA,NA
 1,"telecommunications","telecommun","telecommun",NA,NA,NA,NA
 1,"telephonist","telephonist","telephonist",NA,NA,NA,NA
 1,"telemarketer","telemarket","telemarket",NA,NA,NA,NA
@@ -5228,7 +5228,7 @@
 1,"gallery","galler","galler",NA,NA,NA,NA
 1,"general","general","general",NA,NA,NA,NA
 1,"generalist","generalist","generalist",NA,NA,NA,NA
-1,"geotechnical","geotechn","geotechn",NA,NA,NA,NA
+1,"geotechnical","geotechn","tech",NA,NA,NA,NA
 1,"german","german","german",NA,NA,NA,NA
 1,"global","global","global",NA,NA,NA,NA
 1,"grocery","grocer","grocer",NA,NA,NA,NA
@@ -5434,7 +5434,7 @@
 1,"surgery","surger","surger",NA,NA,NA,NA
 1,"surgical","surgic","surgic",NA,NA,NA,NA
 1,"talent","talent","talent",NA,NA,NA,NA
-1,"technologist","technolog","technolog",NA,NA,NA,NA
+1,"technologist","technolog","tech",NA,NA,NA,NA
 1,"telecom","telecom","telecom",NA,NA,NA,NA
 1,"telephone","telephon","telephon",NA,NA,NA,NA
 1,"temporary","temporar","temporar",NA,NA,NA,NA
