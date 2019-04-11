@@ -159,8 +159,8 @@ total = pd.merge(total,returns, on = ['TICKER','Year + Month','date'])
 def item(value):
     return value
 
-def shift_df(total,lag,x_column):
-    grouped = pd.DataFrame(total.groupby(['TICKER','Year + Month'])[x_column].agg(item))
+def shift_y(total,lag,y_column):
+    grouped = pd.DataFrame(total.groupby(['TICKER','Year + Month'])[y_column].agg(item))
     shifted_dfs = []
     tickers = grouped.index.get_level_values('TICKER').unique()
     for ticker in tickers:
@@ -168,31 +168,41 @@ def shift_df(total,lag,x_column):
         shifted['TICKER'] = np.repeat(ticker,len(shifted))
         shifted_dfs.append(shifted)
     lagged = pd.concat(shifted_dfs).reset_index().sort_values(by = ['TICKER','Year + Month'])
-    lagged = lagged.rename(columns={x_column: "Lagged " + x_column})
+    
+    lagged[y_column] = [to_float(to) for to in lagged[y_column].values]
+    
+    lagged = lagged.rename(columns={y_column: "Lagged " + y_column})
     return lagged
 
 def run_return_regressions(total,x_var,y_var):
+    reg_coefs = {}
     lags = [1,2,3,6]
-    lagged = []
+    lagged_ys = []
     for L in lags:
-        lagged.append(shift_df(total,L,x_var))
+        lagged_ys.append(shift_y(total,L,y_var))
     matrices = []
-    col_name = 'Lagged ' + str(x_var)
-    for lag in lagged:
+    col_name = 'Lagged ' + str(y_var)
+    for lag in lagged_ys:
         merged = total.merge(lag,on=['TICKER','Year + Month'])
-        merged[col_name] = [to_float(to) for to in merged[col_name].values]
-        matrices.append(merged.dropna())
-    regs = []
+        merged = merged[[x_var,col_name]]
+        merged = merged.dropna()
+        matrices.append(merged)
+    coefs = []
     for matrix in matrices:
-        reg = LinearRegression().fit(matrix[[col_name]], matrix[[y_var]])
-        regs.append(reg)
-    return regs
+        y = matrix[[col_name]]
+        X = matrix[[x_var]]
+        X['constant'] = np.repeat(1,X.shape[0])
+        reg = LinearRegression().fit(X, y)
+        coef = reg.coef_[0][0]
+        coefs.append(coef)
+    reg_coefs[(x_var,y_var)] = coefs
+    return reg_coefs
 
 pairs = [('Turnover','RET'),('Turnover','abnormal_return'),('abnormal_turnover','abnormal_return')]
 
-regressions = {}
+coefs = {}
 for pair in pairs:
-    regressions[(pair[0],pair[1])] = run_return_regressions(pair[0],pair[1])
+    coefs[(pair[0],pair[1])] = run_return_regressions(total,pair[0],pair[1])
 
 # once I have these regressions - what do I do with them again?
 
