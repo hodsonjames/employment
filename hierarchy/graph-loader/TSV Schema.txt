@@ -1,0 +1,74 @@
+
+
+persons.tsv             # One line per each distinct person
+-----------
+Person Num ID           # Generated, unique for each person
+Person Text ID          # As provided in the data
+Name
+Year of Birth
+Gender
+Ethnicity
+Social Connectivity
+City
+Country
+Highest Education Achieved
+Elite Institution Flag
+
+
+skills.tsv              # One line per each distinct skill
+----------
+Skill Num ID
+Skill Name
+
+
+person_skills.tsv       # One line per person-skill link (2 per person)
+-----------------
+Person Num ID
+Skill Num ID
+Skill Weight
+
+
+organizations.tsv       # One line per each distinct organization
+-----------------
+Organization Num ID
+Official Name           # Official name if known else name as given
+Ticker
+Exchange / Venue Traded
+Public Company Flag
+Location of Organization
+Industry (NAICS)
+Elite Educational Org Flag  # Only for educational organizations else empty
+
+
+roles.tsv               # One line for each role-organization pair
+---------
+Role Num ID
+Organization Num ID
+Role Title              # Role without the department information!
+Education Role Flag
+Education Role Level
+
+
+departments.tsv         # One line for each department-organization pair
+---------------
+Department Num ID
+Organization Num ID
+Department Name
+
+
+employments.tsv         # One line for each employment record of each person
+---------------
+Employment Num ID
+Person Num ID
+Role Num ID
+Department Num ID       # Empty is the department is unknown
+Employment Start Date
+Employment End Date
+Employment Duration
+Organization Name Provided
+
+
+employment_precedence.tsv   # One line for each successive pair of employments of the same person
+-------------------------
+Source Employment Num ID
+Target Employment Num ID

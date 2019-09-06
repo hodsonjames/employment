@@ -1,0 +1,1 @@
+:ID(Person)	name:string	yearOfBirth:int	gender:int	ethnicity:string	connectivity:int	city:string	country:string	highestEdu:int	eliteInst:boolean
