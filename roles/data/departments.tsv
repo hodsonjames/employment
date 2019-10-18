@@ -1,0 +1,320 @@
+Owner	0	OVERSIGHT
+General Manager	0	OVERSIGHT
+Director	0	OVERSIGHT
+Chief	0	OVERSIGHT
+founder	0	OVERSIGHT
+partner	0	OVERSIGHT
+Marketing	4569	MARKETING
+Sales	3359	MARKETING
+Operations	1104	OPERATIONS
+Finance	1088	ACCOUNTING
+Business Development	897	BUSINESS
+Communications	837	MANAGEMENT
+Planning	831	BUSINESS
+R&D	800	TECHNOLOGY
+HR	752	HR
+Media	649	MARKETING
+Design	639	MARKETING
+Events	628	MARKETING
+Training	603	HR
+Service	601	MARKETING
+Strategy	572	BUSINESS
+Research	546	TECHNOLOGY
+Safety	519	OPERATIONS
+Financial	495	ACCOUNTING
+Web	469	TECHNOLOGY
+PR	467	MANAGEMENT
+Health	457	HR
+Graphic	446	MARKETING
+Social Media	409	MARKETING
+Support	397	MARKETING
+Accounting	395	ACCOUNTING
+Production	388	PRODUCTION
+Logistics	383	OPERATIONS
+IT	373	TECHNOLOGY
+Compliance	345	OVERSIGHT
+Corporate	336	BUSINESS
+Communication	332	MANAGEMENT
+Food	278	OPERATIONS
+Services	268	HR
+Engineering	258	TECHNOLOGY
+Customer Service	252	MARKETING
+Software	249	TECHNOLOGY
+Human Resources	243	HR
+Risk	242	OVERSIGHT
+Technology	222	TECHNOLOGY
+Recruitment	219	HR
+Beverage	211	OPERATIONS
+Legal	201	LEGAL
+Procurement	195	OPERATIONS
+Systems	193	TECHNOLOGY
+Network	192	TECHNOLOGY
+Audit	188	ACCOUNTING
+Community	186	MARKETING
+Commercial	185	BUSINESS
+Security	175	OPERATIONS
+Payroll	168	HR
+Reporting	164	ACCOUNTING
+Purchasing	162	OPERATIONS
+Financial Planning	161	ACCOUNTING
+Brand	158	MARKETING
+Compensation	157	HR
+Tax	143	ACCOUNTING
+Analytics	143	BUSINESS
+Maintenance	139	OPERATIONS
+Art	133	PRODUCTION
+Advertising	132	MARKETING
+Digital Marketing	131	MARKETING
+Supply Chain	125	OPERATIONS
+Promotions	125	MARKETING
+Credit	123	ACCOUNTING
+Communicatie	119	MANAGEMENT
+Electrical	118	OPERATIONS
+Acquisitions	116	OPERATIONS
+Facilities	112	OPERATIONS
+Contracts	106	LEGAL
+Education	105	HR
+Distribution	102	OPERATIONS
+Investment	101	ACCOUNTING
+marketing	99	MARKETING
+Banking	99	ACCOUNTING
+Strategic	97	BUSINESS
+Catering	95	OPERATIONS
+Property	92	BUSINESS
+Policy	91	MANAGEMENT
+Insurance	90	ACCOUNTING
+Mergers	88	ACCOUNTING
+Instrumentation	87	PRODUCTION
+Outreach	86	MARKETING
+Construction	86	PRODUCTION
+SEO	85	MARKETING
+Market	85	BUSINESS
+Innovation	85	BUSINESS
+Recruiting	83	HR
+Merchandising	83	MARKETING
+Quality Assurance	79	PRODUCTION
+Fundraising	74	MARKETING
+Inventory	73	OPERATIONS
+Membership	72	MARKETING
+UX	70	TECHNOLOGY
+Science	70	TECHNOLOGY
+Leasing	70	OPERATIONS
+Graphic Design	70	MARKETING
+Special Events	68	MARKETING
+Environment	67	OVERSIGHT
+Export	66	OPERATIONS
+Warehouse	64	OPERATIONS
+Visual	64	MARKETING
+Operation	64	OPERATIONS
+Collections	64	ACCOUNTING
+Pricing	63	BUSINESS
+Delivery	63	OPERATIONS
+Culture	62	HR
+Travel	60	OPERATIONS
+sales	60	MARKETING
+Sponsorship	54	ACCOUNTING
+Manufacturing	53	PRODUCTION
+Operating	52	OPERATIONS
+Promotion	51	MARKETING
+Contract	51	LEGAL
+Reservations	50	MARKETING
+QA	50	PRODUCTION
+Retail	48	MARKETING
+Budget	48	ACCOUNTING
+Regulatory Affairs	46	OVERSIGHT
+Wellness	45	HR
+Print	45	MARKETING
+Personnel	45	HR
+Partnerships	45	MANAGEMENT
+International Sales	45	MARKETING
+Integration	45	TECHNOLOGY
+Employment	45	HR
+Branding	45	MARKETING
+Real Estate	44	OPERATIONS
+Logistic	44	OPERATIONS
+Client Services	44	MARKETING
+Revenue	43	ACCOUNTING
+Implementation	43	TECHNOLOGY
+Corporate Communications	43	MARKETING
+Sourcing	42	OPERATIONS
+Strategic Planning	41	MANAGEMENT
+Trading	39	ACCOUNTING
+Publicity	39	MARKETING
+Import	39	OPERATIONS
+Acquisition	39	ACCOUNTING
+Graphics	38	MARKETING
+Admissions	38	HR
+SALES	37	MARKETING
+Community Relations	37	MARKETING
+Risk Management	36	OVERSIGHT
+Receivable	36	OPERATIONS
+Inside Sales	36	MARKETING
+Automation	36	TEHNOLOGY
+Accounts Payable	35	ACCOUNTING
+Treasury	34	ACCOUNTING
+Shipping	34	OPERATIONS
+Purchase	34	OPERATIONS
+Parts	34	PRODUCTION
+Online Marketing	34	MARKETING
+HRIS	34	HR
+Business Planning	34	BUSINESS
+Trade Marketing	32	MARKETING
+MARKETING	32	MARKETING
+Legal Affairs	32	LEGAL
+Staffing	31	HR
+Programs	31	BUSINESS
+Retention	30	HR
+Regional Sales	30	MARKETING
+Grants	30	BUSINESS
+New Business	29	MARKETING
+National Sales	29	MARKETING
+Marketing Communications	29	MARKETING
+Human Resource	27	HR
+Diversity	27	HR
+Reservation	26	MARKETING
+Investor Relations	26	MANAGEMENT
+Hospitality	26	MARKETING
+Engagement	26	MARKETING
+E-Commerce	26	MARKETING
+Business Intelligence	26	BUSINESS
+Architecture	26	PRODUCTION
+Accounts Receivable	26	ACCOUNTING
+Testing	25	TECHNOLOGY
+Piping	25	PRODUCTION
+Investment Banking	25	ACCOUNTING
+Installation	25	PRODUCTION
+Hardware	25	PRODUCTION
+Environmental Health	25	OVERSIGHT
+Digital Media	25	MARKETING
+Client Relations	25	MARKETING
+Web Design	24	MARKETING
+Programming	24	TECHNOLOGY
+Media Relations	24	MANAGEMENT
+Lighting	24	PRODUCTION
+Events Sales	24	MARKETING
+Drilling	24	PRODUCTION
+Buying	24	OPERATIONS
+Account Management	24	MARKETING
+IT Support	23	TECHNOLOGY
+Financial Reporting	23	ACCOUNTING
+communicatie	23	MARKETING
+Business Operations	23	BUSINESS
+User Experience	22	TECHNOLOGY
+Ticketing	22	MARKETING
+Photography	22	PRODUCTION
+Market Research	22	BUSINESS
+Licensing	22	LEGAL
+Talent Acquisition	21	HR
+Special Projects	21	BUSINESS
+Repair	21	PRODUCTION
+Quality Control	21	PRODUCTION
+Products	21	BUSINESS
+Placement	21	HR
+Personeel	21	HR
+Mortgage	21	ACCOUNTING
+Fraud	21	OVERSIGHT
+Technical Sales	20	MARKETING
+Reliability	20	PRODUCTION
+Mobile	20	TECHNOLOGY
+Loan	20	ACCOUNTING
+FINANCE	20	ACCOUNTING
+Transportation	19	OPERATIONS
+Sale	19	MARKETING
+Global Marketing	19	MARKETING
+Développement	19	BUSINESS
+Applications	19	TECHNOLOGY
+Valuation	18	ACCOUNTING
+UI/UX	18	TECHNOLOGY
+Transport	18	OPERATIONS
+Product Marketing	18	MARKETING
+Production Planning	18	MARKETING
+Multimedia	18	MARKETING
+Facility	18	OPERATIONS
+Corporate Strategy	18	MANAGEMENT
+Lab	17	TECHNOLOGY
+Interaction	17	TECHNOLOGY
+Fleet	17	OPERATIONS
+Customer Services	17	MARKETING
+Customer Care	17	MARKETING
+Corporate Sales	17	MARKETING
+BI	17	BUSINESS
+Plumbing	16	PRODUCTION
+IT Risk	16	OVERSIGHT
+International Marketing	16	MARKETING
+Ethics	16	HR
+Dispute	16	LEGAL
+Content Marketing	16	MARKETING
+Alliances	16	BUSINESS
+Taxation	15	ACCOUNTING
+Social Media Marketing	15	MARKETING
+Merchandise	15	MARKETING
+Media Marketing	15	MARKETING
+Information Security	15	OVERSIGHT
+Growth	15	BUSINESS
+Financial Services	15	ACCOUNTING
+Customer Support	15	MARKETING
+Corporate Financial Planning	15	ACCOUNTING
+Corporate Financial	15	ACCOUNTING
+Business Support	15	BUSINESS
+Business Affairs	15	BUSINESS
+A/R	15	ACCOUNTING
+Android	15	TECHNOLOGY
+Solutions	14	BUSINESS
+Organisational Development	14	HR
+Operational	14	OPERATIONS
+Network Support	14	TECHNOLOGY
+Labor Relations	14	HR
+Kommunikation	14	MARKETING
+Equipment	14	PRODUCTION
+Electronics	14	PRODUCTION
+Dispute Services	14	LEGAL
+Capital Markets	14	ACCOUNTING
+Campaign	14	MARKETING
+Architectural	14	PRODUCTION
+Sales Operations	13	MARKETING
+Receiving	13	OPERATIONS
+QC	13	PRODUCTION
+Marketing Strategy	13	MARKETING
+Lettings	13	OPERATIONS
+Landscape	13	OPERATIONS
+Inventory Control	13	OPERATIONS
+Internal Audit	13	ACCOUNTING
+Event Planning	13	MARKETING
+Welding	12	PRODUCTION
+Web Development	12	TECHNOLOGY
+web	12	TECHNOLOGY
+Sciences	12	TECHNOLOGY
+Retail Sales	12	MARKETING
+Residential	12	OPERATIONS
+Operations Planning	12	OPERATIONS
+New Business Development	12	BUSINESS
+Loss Prevention	12	ACCOUNTING
+Investigation	12	OVERSIGHT
+Internet	12	TECHNOLOGY
+Group Sales	12	MARKETING
+Foundation Relations	12	BUSINESS
+Event Management	12	MARKETING
+Employee Relations	12	HR
+Customer Sales	12	MARKETING
+Business Strategy	12	BUSINESS
+Benefit	12	HR
+Bank	12	ACCOUNTING
+Technology Delivery	11	TECHNOLOGY
+Sustainability	11	OPERATIONS
+Scientific	11	TECHNOLOGY
+Rental	11	OPERATIONS
+Project Planning	11	BUSINESS
+Motion Graphics	11	TECHNOLOGY
+Marketing Support	11	MARKETING
+iOS	11	TECHNOLOGY
+Interactive	11	TECHNOLOGY
+ICT	11	TECHNOLOGY
+Governance	11	OPERATIONS
+Fraud Investigation	11	OVERSIGHT
+finance	11	ACCOUNTING
+E-commerce	11	MARKETING
+Creative Services	11	MARKETING
+Corporate Marketing	11	MARKETING
+Claims	11	ACCOUNTING
+Alumni Relations	11	BUSINESS
+Horticulture	0	OPERATIONS

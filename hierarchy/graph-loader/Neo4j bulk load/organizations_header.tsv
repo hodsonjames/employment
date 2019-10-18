@@ -1,0 +1,1 @@
+:ID(Organization)	name:string	ticker:string	exchange:string	isPublic:boolean	location:string	industry:string	isElite:boolean
