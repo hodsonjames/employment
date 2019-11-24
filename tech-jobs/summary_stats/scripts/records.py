@@ -11,21 +11,21 @@ class Records:
     # Varlist: Hiring/Leaving/Firing, Ticker, year-month, profile_info: [...], next_industry.
     def enter_record(self, employee):
         event = ['hiring',employee.ticker,employee.start_date
-               ]+employee.profile+[employee.job_role,employee.department
+               ]+employee.profile+[employee.job_role, employee.department
                               ]+['']+['',''] 
         self.data.append(event)
 
 
     def leave_record(self, employee, next_industry):
         event = ['leaving',employee.ticker,employee.end_date
-               ]+employee.profile+[employee.job_role,employee.department
+               ]+employee.profile+[employee.job_role, employee.department
                               ]+[next_industry]+[time_diff(employee.end_date,employee.start_date),
                                                  employee.nth_posit]
         self.data.append(event)
 
     def fired_record(self, employee):
         event = ['firing',employee.ticker,employee.end_date
-               ]+employee.profile+[employee.job_role,employee.department
+               ]+employee.profile+[employee.job_role, employee.department
                               ]+['']+[time_diff(employee.end_date,employee.start_date),
                                       employee.nth_posit]
         self.data.append(event)

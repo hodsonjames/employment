@@ -12,9 +12,8 @@ from employee import Employee
 from records import Records
 
 empl_path = sys.argv[1] #directory of csv files to process
-tickers = sys.argv[2].split(',') # comma separated tickers
-primary_skills = sys.argv[3].split(',') # filter by primary skill, "all" for alll skills, -(skill) to exclude
-target = sys.argv[4] #csv file name to write
+primary_skills = sys.argv[2].split(',') # filter by primary skill, "all" for alll skills, -(skill) to exclude
+target = sys.argv[3] #csv file name to write
 
 exclusive = False
 if primary_skills[0][0] == '-':
@@ -27,12 +26,14 @@ if primary_skills[0][0] == '-':
 ## Initialize. Tickers include companies of interest
 rec = Records()
 employee = Employee() # default empty employee
-processor = EntryProcessor(employee, rec, tickers)
+processor = EntryProcessor(employee, rec)
 
+#block for annual counts. 
+empl_file_lst = os.listdir(empl_path)
+tickers = [file_name[:-4].upper() for file_name in empl_file_lst]
 empl_by_year = {}
 for ticker in tickers:
     empl_by_year[ticker] = Counter([])
-
 def annualCounter(entry):
     ''' Updates empl_by_year dictionary '''
     if entry[21] in tickers and entry[11] != "None" and (entry[13] != "None" or entry[15] == "True"):
@@ -48,8 +49,9 @@ def annualCounter(entry):
 empl_file_lst = os.listdir(empl_path)
 for empl_file_name in empl_file_lst:
     empl_file = empl_path + '/' +empl_file_name
+    ticker = empl_file_name[:-4].upper()
+    processor.change_ticker(ticker)
     with open(empl_file,"rb") as f:
-        num = 0
         reader = csv.reader(f,encoding='utf-8',escapechar='',delimiter='\t')
         for idx, entry in enumerate(itertools.chain(reader,[[None]*33])):
             if idx == np.inf: # End point
@@ -77,7 +79,7 @@ for empl_file_name in empl_file_lst:
 
 empl_changes_lst = rec.output()
 varlist = [
-    "type","ticker","yrmth","birth","gender","skill1","skill2","cntry","edu","f_elite",
+    "type","ticker","yrmth","birth","gender","skill1","skill2","cntry","edu","f_elite", "edu_faculty",
     "job_role","depmt","ind_next","tenure","nprom"
 ]
 

@@ -3,7 +3,7 @@ import numpy as np
 
 class Employee:
     def __init__(self, profile = [None]*7):
-        self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite"
+        self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite, edu_faculty"
         self.start_date = None
         self.end_date = None
         self.ticker = None
@@ -27,7 +27,7 @@ class Employee:
     
     def enter(self, start, end, ticker, f_current, job_role, department):
         self.start_date = convert_time(start[0], start[1])
-        self.end_date = convert_time(end[0], end[0])
+        self.end_date = convert_time(end[0], end[1])
         self.ticker = ticker
         self.f_current = f_current
         self.job_role = job_role
