@@ -63,8 +63,8 @@ for empl_file_name in empl_file_lst:
             if entry[26] == 'False': # only consider employment data
                 #filter irregular workers
                 irregular_worker_filter = [re.search(r"(?i)\W{}\W".format(x)," "+entry[17]+" ") 
-                                        is None for x in ["intern","internship","trainee"]]
-                is_irregular_worker = (sum(irregular_worker_filter) !=3)
+                                        is None for x in ["intern","internship","trainee","student"]]
+                is_irregular_worker = (sum(irregular_worker_filter) !=4)
                 if is_irregular_worker:
                     continue
                 elif 'all' in primary_skills and entry[3] != '-1':

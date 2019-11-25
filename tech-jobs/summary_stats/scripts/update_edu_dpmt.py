@@ -46,7 +46,7 @@ for empl_file_name in empl_file_lst:
                 edu_dpmt.clear()
 
             if entry[26] == 'False': # employment data
-                match = re.search(r",\s?([\s\w]*)",entry[17])
+                match = re.search(r",\s?([\s\w,]*)",entry[17])
                 if (match is not None):
                     normalized_title = match.group(1)
                 else:
@@ -55,12 +55,14 @@ for empl_file_name in empl_file_lst:
                     entry[18] = roles.parse_work(normalized_title).departments.pop() #is this appropriate? 
                 except:
                     pass
+                entries_per_person.append(entry)
             elif entry[26] == 'True': #education data
                 query = roles.parse_edu(entry[20], entry[17])
                 max_edu = max(max_edu, query.level)
                 # add department
                 for f in query.faculties:
                     edu_dpmt.add(f)
-    with open(empl_file + "_dpmtupdated.csv", "w", newline="") as f:
+                entries_per_person.append(entry)
+    with open(empl_file + "_updated.csv", "w", newline="") as f:
         writer = csv.writer(f, dialect = csv.excel_tab)
         writer.writerows(updated)
