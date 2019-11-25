@@ -1,20 +1,8 @@
 import re
-import numpy as np
 
 class Employee:
-    def __init__(self, profile = [None]*7):
+    def __init__(self, profile = [None]*7, skill2_weight):
         self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite, edu_faculty"
-        self.start_date = None
-        self.end_date = None
-        self.ticker = None
-        self.f_current = None
-        self.job_role = None
-        self.department = None
-        self.nth_posit = None
-
-    
-    def reset(self, profile, skill2_weight):
-        self.profile = profile
         self.start_date = None
         self.end_date = None
         self.ticker = None

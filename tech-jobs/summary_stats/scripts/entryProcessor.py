@@ -1,16 +1,6 @@
-import re
-import itertools
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import unicodecsv as csv
-import seaborn as sns
-from collections import Counter
-from cycler import cycler
-from textwrap import wrap
+from employee import Employee
 
 class EntryProcessor:    
-    
     def __init__(self, employee, records):
         self.current_id = None
         self.employee = employee
@@ -20,7 +10,8 @@ class EntryProcessor:
     def reinitialize(self,entry):
         if self.employee.f_current == 'False':
             self.records.leave_record(self.employee, 'unknown') #data type of industry? 
-        self.employee.reset([entry[x] for x in [1,2,3,5,8,9,10,29]], entry[6])
+        profile = [entry[x] for x in [1,2,3,5,8,9,10,29]]
+        self.employee = Employee(profile, profile, entry[6])
         self.current_id = entry[0]
     
     def change_ticker(self, ticker):
