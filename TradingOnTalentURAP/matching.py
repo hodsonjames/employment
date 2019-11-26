@@ -1,41 +1,33 @@
-import pandas as pd
-from fuzzywuzzy import fuzz 
-from fuzzywuzzy import process
-import numpy as np
+import os
+import sys
+import glob
+import json
+import re
+import csv
+import multiprocessing
 
 locations = pd.read_csv('university_czone.csv')
 universities = pd.read_csv('universities.csv',header=None)
 universities.columns = ['name','student_count']
 
-locations['cleaned_name'] = [name.lower().replace("ʻ","").replace("ā","").replace(".","").replace(",","").replace("-"," ").replace("–"," ").replace("(","").replace(")","") for name in locations['name']]
+# Read in reference schools
 
-universities['cleaned_name'] = [str(name).lower().replace("ʻ","").replace("ā","").replace(".","").replace(",","").replace("-"," ").replace("–"," ").replace("(","").replace(")","") for name in universities['name']]
+schools_f = open('herd_2008_unique_school.csv','rt',encoding='utf-8')
+schools_c = csv.reader(schools_f)
 
-# # Remove all leading "the"
+schools_d = []
+schools = []
+for school in schools_c:
+    schools_d.append( (set([i for i in 
+                            school[9].lower().translate({ord(c): ' ' 
+                            for c in '|[]_*?!@#$,.-;:"/()'}).split() 
+                            if i not in ['in','at','of','for','studies','all',
+                                         'campuses','main','campus','and','the',
+                                         '&']]), school[9]))
 
-def remove_prefix(text, prefix):
-    if text.startswith(prefix):
-        return text[len(prefix):]
-    return text
-
-
-universities['cleaned_name'] = universities['cleaned_name'].apply(lambda x: remove_prefix(x, 'the '))
-
-# # Construct dictionary of matches
-
-# key: value
-# names of university from locations: list of all matchings in universities
-
-mappings = {}
-for name in locations['cleaned_name']:
-    
-    if name[-11:] == 'main campus':
-        name = name[:-12]
-    
-    if name in mappings:
-        mappings[name].append(name)
-    else:
-        mappings[name] = [name]
+schools = [i[0] for i in schools_d]
+schools = schools[1:]
+schools_d = schools_d[1:]
 
 # Colloquial names found on Wikipedia
 
@@ -481,81 +473,95 @@ colloquial_names = {
 "YSU":["Youngstown State University"],
 "YU":["Yeshiva University"]}
 
+def processor(oag,schools,schools_d,colloquial_names):
 
-# # Replace things in the dict
-
-# * make all lowercase
-# * get rid of ".", replace with ""
-# * get rid of ",", replace with ""
-# * get rid of "-", replace with " "
-# * get rid of "(", replace with ""
-
-for colloquial_name in colloquial_names:
+    # Dictionaries to maintain
+    org_map = {}
+    non_org = {}
+    unis = {}
     
-    unis = colloquial_names[colloquial_name]
+    def is_ascii(s):
+        return all(ord(c) < 128 for c in s)
+
+    different_spellings = ['universiteit','universiteit','univerzita','üniversitesi','université','universidad','università','uniwersytet','universidade','universitatea','universität','universitet']
+
+    lowered_colloquial_names = {k.lower(): v for k, v in colloquial_names.items()}
     
-    colloquial_name = colloquial_name.lower().replace("ʻ","").replace("ā","").replace(".","").replace(",","").replace("-"," ").replace("–"," ").replace("(","").replace(")","")
-    
-    unis = [name.lower().replace("ʻ","").replace("ā","").replace(".","").replace(",","").replace("-"," ").replace("–"," ").replace("(","").replace(")","") for name in unis]
-    
-    for name in unis:
-        if name in mappings:
-            mappings[name].append(colloquial_name)
-        else:
-            mappings[name] = [colloquial_name]
-            mappings[name].append(name)
+    print('Processing ',oag)
+    with open(oag,'rt',encoding='utf-8') as f:
+        f = csv.reader(f)
+        for line in f:
+            org = [i for i in line[0].lower().translate({ord(c): None for c in '!@#$,.-;:"/()'}).split() if i not in ['in','at','of','for','studies','all','campuses','main','campus','and','the','&']]
+            str_org = ' '.join(org)
+            if not len(org):
+                continue
+            clean_org = None
+                            
+            if str_org in org_map:
+                clean_org = org_map[str_org]
+            elif str_org in lowered_colloquial_names:
+                clean_orgs = lowered_colloquial_names[str_org]
+                if len(clean_orgs) > 1:
+                    continue
+                else:
+                    clean_org = clean_orgs[0]
+            elif any(uni in str_org for uni in different_spellings):
+                non_org[str_org] = None
+                continue
+            elif not is_ascii(str_org):
+                non_org[str_org] = None
+                continue
+            elif str_org in non_org:
+                continue
+            else:
+                org = set(org)
+                matches = []
+                idx = 0
+                for school in schools: #passed in 
+                    if len(org & school) in [len(org),len(school)]:
+                        matches.append((school,idx))
+                    idx += 1
+                if not matches:
+                    non_org[str_org] = None
+                    continue
+                top = 1.0
+                top_i = 0
+                if len(matches) > 1:
+                    counter = 0
+                    for m in matches:
+                        overlap = float(len(org & m[0]))
+                        left = overlap / float(len(org))
+                        right = overlap / float(len(m[0]))
+                        diff = abs(left-right)
+                        if diff < top:
+                            top = abs(left-right)
+                            top_i = counter
+                        counter += 1
+                clean_org = schools_d[matches[top_i][1]][1]
+                org_map[str_org] = clean_org
+            
+            # Create entry if it doesn't exist
+            #print((clean_org))
+            if clean_org not in unis:
+                unis[clean_org] = []
+            else:
+                unis[clean_org].append(str_org)
+                
+    return org_map, non_org, unis
 
-
-# # Try to filter out Non-US universities
-
-def is_ascii(s):
-    return all(ord(c) < 128 for c in s)
-
-to_exclude = []
-different_spellings = ['universiteit','universiteit','univerzita','üniversitesi','université','universidad','università','uniwersytet','universidade','universitatea','universität','universitet']
-
+matches = []
 for index, row in universities.iterrows():
+    name = row['name']
     
-    if not is_ascii(row['cleaned_name']):
-        to_exclude.append(row['cleaned_name'])
-    elif any(uni in row['cleaned_name'] for uni in different_spellings):
-        to_exclude.append(row['cleaned_name'])
-
-universities = universities[~universities['cleaned_name'].isin(to_exclude)]
-
-# # Assign first run matches with dict
-
-
-keys = set(mappings.keys())
-
-
-vals = set([item for sublist in mappings.values() for item in sublist])
-
-matched = []
-for index, row in universities.iterrows():
-    
-    name = row['cleaned_name']
-    
-    if name in keys or name in vals:
-        matched.append(name)
+    if name in org_map:
+        matches.append(org_map[name])
     else:
-        matched.append(np.nan)
+        matches.append(None)
 
-universities['location_name'] = matched
+universities['match'] = matches
 
-
-# # Handle some obvious cases
-
-
-mappings['pennsylvania state university'].append('penn state')
-mappings['pennsylvania state university'].append('penn state university')
-mappings['university of phoenix'] = ['university of phoenix']
-
-universities.location_name[universities.cleaned_name == 'penn state university'] = 'pennsylvania state university'
-universities.location_name[universities.cleaned_name == 'penn state'] = 'pennsylvania state university'
-universities.location_name[universities.cleaned_name == 'university of phoenix'] = 'university of phoenix'
 
 # # Write to csv
 
-universities.to_csv("/Users/jacquelinewood/Documents/URAP/Matching/universities_with_location_names.csv")
+universities.to_csv("/Users/jacquelinewood/Documents/URAP/Matching/matched_universities.csv")
 
