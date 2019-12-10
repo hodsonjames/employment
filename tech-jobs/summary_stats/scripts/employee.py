@@ -1,7 +1,7 @@
 import re
 
 class Employee:
-    def __init__(self, profile = [None]*7, skill2_weight):
+    def __init__(self, profile = [], skill2_weight = None):
         self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite, edu_faculty"
         self.start_date = None
         self.end_date = None
@@ -24,9 +24,9 @@ class Employee:
 
     # updating the end date, f_current, and number of promotions(repeated emplyoments)
     def update(self, date, f_valid_month, f_current):
-        self.f_current = f_current
         self.end_date = convert_time(date, f_valid_month)
         self.nth_posit += 1
+        self.f_current = f_current
 
 def convert_time(date,f_valid_month):
     date_regex = re.match(r"(\d{4})-(\d{2})-\d{2}",date)
