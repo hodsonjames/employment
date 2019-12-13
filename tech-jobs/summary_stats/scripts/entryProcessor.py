@@ -11,7 +11,9 @@ class EntryProcessor:
     def reinitialize(self,entry):
         if self.employee.f_current == 'False':
             self.records.leave_record(self.employee, 'unknown') #data type of industry? 
-        profile = [entry[x] for x in [1,2,3,5,8,9,10,29]]
+        profile = [entry[x] for x in [1,2,3,5,8,9,10]]
+        profile.append([]) # place for faculty
+        profile.append([]) # placeholder for raw_skills
         self.employee = Employee(profile, entry[6])
         self.current_id = entry[0]
     
@@ -46,8 +48,11 @@ class EntryProcessor:
                                 entry[21], entry[15], entry[17], entry[18])
                 self.records.enter_record(self.employee)
 
-    def json_read(self, experience, profile, keys):
-        if self.employee.profile == []:
+    def json_read(self, usrid, experience, profile, keys):
+        if usrid != self.current_id:
+            if self.employee.f_current == 'False':
+                self.records.leave_record(self.employee, 'unknown') #data type of industry?
+            self.current_id = id
             second_skill_level = profile['secondary_skill']['confidence']
             profile['secondary_skill'] = profile['secondary_skill']['skill']
             p = [profile[k] for k in keys]

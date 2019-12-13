@@ -2,7 +2,7 @@ import re
 
 class Employee:
     def __init__(self, profile = [], skill2_weight = None):
-        self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite, edu_faculty"
+        self.profile = profile # "birth_year","gender","skill1","skill2","country","education_level","f_elite, edu_faculty", raw_skills
         self.start_date = None
         self.end_date = None
         self.ticker = None
