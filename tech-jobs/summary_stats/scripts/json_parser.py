@@ -105,6 +105,6 @@ def json_parser(processor, empl_by_year, empl_path, tickers, infer_tickers, prim
                 for line in f:
                     load_and_process(line)
     elif os.path.isfile(empl_path):
-        with open(empl_file) as f:
+        with open(empl_path) as f:
             for line in f:
                 load_and_process(line)

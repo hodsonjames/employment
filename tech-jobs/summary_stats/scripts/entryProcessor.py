@@ -52,7 +52,7 @@ class EntryProcessor:
         if usrid != self.current_id:
             if self.employee.f_current == 'False':
                 self.records.leave_record(self.employee, 'unknown') #data type of industry?
-            self.current_id = id
+            self.current_id = usrid
             second_skill_level = profile['secondary_skill']['confidence']
             profile['secondary_skill'] = profile['secondary_skill']['skill']
             p = [profile[k] for k in keys]

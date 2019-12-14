@@ -40,7 +40,7 @@ else:
         tickers = [os.path.splitext(file_name)[0].upper() for file_name in empl_file_lst]
         infer_tickers = True
     except NotADirectoryError:
-        print('Tickers must be specified to run directly on data file')
+        print('NOT SUPPORTED: Tickers must be specified to run directly on data file')
         sys.exit(1)
 
 ## Initialize. Tickers include companies of interest
