@@ -10,77 +10,65 @@ from collections import Counter
 from entryProcessor import EntryProcessor
 from employee import Employee
 from records import Records
+from csv_parser  import csv_parser
+from json_parser import json_parser
 
-empl_path = sys.argv[1] #directory of csv files to process
-primary_skills = sys.argv[2].split(',') # filter by primary skill, "all" for alll skills, -(skill) to exclude
-target = sys.argv[3] #csv file name to write
-
-exclusive = False
-if primary_skills[0][0] == '-':
-    exclusive = True
-    all_skills_but = []
-    for skill in primary_skills:
-        all_skills_but.append(re.sub(r'[-()]','', skill))
-    all_skills_but.append('-1')
+try:
+    assert len(sys.argv) == 5
+except AssertionError:
+    print('''Correct usage: 
+    python main.py (directory containing data) (target) (primary skills) (infer tickers) 
+    target: name of file to be written under outputs 
+    primary_skills: filter by primary skill, with options "all" for every skills, -(skill) to exclude 
+    infer_tickers: Either True or comma separated list of normalizaed tickers. 
+                   If True, the files under directory are expected to be named as
+                   the corresponding tickers of interest.
+                   '''
+    )
+    sys.exit(1)
+    
+empl_path = sys.argv[1] #directory of files to process
+target = sys.argv[2] #csv file name to write
+primary_skills = sys.argv[3].split(',') # 
+infer_tickers = sys.argv[4]
+if infer_tickers != 'True':
+    tickers = infer_tickers.split(',')
+    infer_tickers = False
+else:
+    try:
+        empl_file_lst = os.listdir(empl_path)
+        tickers = [os.path.splitext(file_name)[0].upper() for file_name in empl_file_lst]
+        infer_tickers = True
+    except NotADirectoryError:
+        print('NOT SUPPORTED: Tickers must be specified to run directly on data file')
+        sys.exit(1)
 
 ## Initialize. Tickers include companies of interest
 rec = Records()
 employee = Employee() # default empty employee
-processor = EntryProcessor(employee, rec)
+processor = EntryProcessor(employee, rec, tickers)
 
-#block for annual counts. 
-empl_file_lst = os.listdir(empl_path)
-tickers = [file_name[:-4].upper() for file_name in empl_file_lst]
 empl_by_year = {}
 for ticker in tickers:
     empl_by_year[ticker] = Counter([])
-def annualCounter(entry):
-    ''' Updates empl_by_year dictionary '''
-    if entry[21] in tickers and entry[11] != "None" and (entry[13] != "None" or entry[15] == "True"):
-        empl_by_year[entry[21]] += Counter(
-            range(
-                pd.to_datetime(entry[11]).year,
-                pd.to_datetime(entry[13]).year if entry[13]!="None" else 2019
-            )
-        )
 
+if os.path.isdir(empl_path):
+    if os.listdir(empl_path)[0].endswith('.csv'):
+        csv_parser(processor, empl_by_year, empl_path, tickers, infer_tickers, primary_skills)
+    else:
+        json_parser(processor, empl_by_year, empl_path, tickers, infer_tickers, primary_skills)
+else:
+    if empl_path.endswith('.csv'):
+        print('Individual file processing supported only on json')
+        sys.exit(1)
+    else:
+        json_parser(processor, empl_by_year, empl_path, tickers, infer_tickers, primary_skills)
 
-## Iterate.
-empl_file_lst = os.listdir(empl_path)
-for empl_file_name in empl_file_lst:
-    empl_file = empl_path + '/' +empl_file_name
-    ticker = empl_file_name[:-4].upper()
-    processor.change_ticker(ticker)
-    with open(empl_file,"rb") as f:
-        reader = csv.reader(f,encoding='utf-8',escapechar='',delimiter='\t')
-        for idx, entry in enumerate(itertools.chain(reader,[[None]*33])):
-            if idx == np.inf: # End point
-                break
-            # Some datasets have extra column of employee names
-            # Drop entry[1] if it contains employee name instead of birth year  
-            if len(entry) > 33:
-                del entry[1]
-            if entry[26] == 'False': # only consider employment data
-                #filter irregular workers
-                irregular_worker_filter = [re.search(r"(?i)\W{}\W".format(x)," "+entry[17]+" ") 
-                                        is None for x in ["intern","internship","trainee","student"]]
-                is_irregular_worker = (sum(irregular_worker_filter) !=4)
-                if is_irregular_worker:
-                    continue
-                elif 'all' in primary_skills and entry[3] != '-1':
-                    update = processor.read(entry)
-                    annualCounter(entry)
-                elif exclusive and entry[3] not in all_skills_but:
-                    update = processor.read(entry)
-                    annualCounter(entry)
-                elif entry[3] in primary_skills:
-                    update = processor.read(entry)
-                    annualCounter(entry)
-
+#block for annual counts. 
 empl_changes_lst = rec.output()
 varlist = [
-    "type","ticker","yrmth","birth","gender","skill1","skill2","cntry","edu","f_elite", "edu_faculty",
-    "job_role","depmt","ind_next","tenure","nprom"
+    "type","ticker","yrmth", "birth","gender","skill1","skill2","cntry","edu","f_elite",
+    "edu_faculty","raw_skills", "job_role","depmt","ind_next","tenure","nprom"
 ]
 
 empl_changes_df = pd.DataFrame(data=empl_changes_lst,columns=varlist)
