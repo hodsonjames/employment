@@ -1,0 +1,4 @@
+This folder contains infrastructure to predict a NAICS industry for a company, based on similar companies' industries.
+
+/data/ contains data files for training models;
+/models/ contains trained models for assigning NAICS;
